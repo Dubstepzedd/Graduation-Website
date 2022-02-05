@@ -1,6 +1,6 @@
 <?php 
 require("components/init_session.php");
-require("db_connection.php");
+require("components/db_connection.php");
 
 // Here we handle the form data send by register.php. We know that this information is valid. e.g firstname does not contain numbers.
 

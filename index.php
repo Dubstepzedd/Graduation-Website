@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php require("init_session.php"); ?>
+        <?php require("components/init_session.php"); ?>
         <!--- Ordinary Information -->
         <title>Student | Start</title>
         <link rel="icon" href="bilder/mössa.jpg">
@@ -22,7 +22,7 @@
         <!--- Header -->
         <?php  
           require("components/header.php"); 
-          include("check_error.php");
+          include("components/check_error.php");
           if(wasSuccessful()) {
             echo "<div id='successful-header'>Ditt konto är nu registrerat!</div>";
           }
