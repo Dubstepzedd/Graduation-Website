@@ -1,12 +1,12 @@
-
-.container-fluid {
-    padding: 0 !important;  
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    overflow-x: hidden;
 }
 .wrapper {
     position: relative;
 }
 #left-image {
-    background-image: url("../bilder/liam.jpg");
+    background-image: url("../bilder/felicia_liten.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -19,43 +19,60 @@
         to top,
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.7)
-      ),  url("../bilder/liam.jpg");
+      ),  url("../bilder/felicia_liten.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    text-align: center;
-    color: white;
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 
 #right-image {
-    background-image: url("../bilder/liam.jpg");
+    background-image: url("../bilder/felicia_liten.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-@media (max-width: 630px) {
+/*
+@media (max-width: 670px) {
 
     #countdown {
         font-weight: bold;
         font-size: 3em !important;
         padding-top: 70px !important;
     }
-    .countdown-text {
+    #countdown-text {
         font-size: 1.25em;
     }
 }
+*/
+
+.countdown-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+#countdown-text {
+    text-align: center;
+}
 
 #countdown {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 3px;
     font-weight: bold;
     font-size: 3em;
     padding-top: 30px;
 }
-.custom-shape-divider-bottom-1643880752 {
+
+.custom-shape-divider-bottom-1644017640 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -65,15 +82,15 @@
     transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1643880752 svg {
+.custom-shape-divider-bottom-1644017640 svg {
     position: relative;
     display: block;
-    width: calc(106% + 1.3px);
-    height: 96px;
+    width: calc(100% + 1.3px);
+    height: 30px;
 }
 
-.custom-shape-divider-bottom-1643880752 .shape-fill {
-    fill: #FFFF;
+.custom-shape-divider-bottom-1644017640 .shape-fill {
+    fill: #FFFFFF;
 }
 
 
@@ -90,8 +107,8 @@
     display:inline-block;
     margin:15px;
     font-weight:bold;
-    background: rgb(255,205,0);
-    background: linear-gradient(0deg, rgba(255,205,0,1) 0%, rgba(248,201,4,1) 0%, rgba(237,195,10,1) 50%, rgba(12,81,128,1) 50%, rgba(0,75,135,1) 100%);
+    background: rgb(0,75,135);
+background: linear-gradient(0deg, rgba(0,75,135,1) 50%, rgba(255,205,0,1) 50%);
     background-clip: text;
     color: transparent;
     -webkit-background-clip: text;

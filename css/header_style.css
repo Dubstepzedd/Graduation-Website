@@ -1,5 +1,5 @@
 
-body, header, footer {
+header {
     font-family: 'Montserrat', sans-serif !important;
     overflow-x: hidden;
 }
@@ -30,7 +30,7 @@ body, header, footer {
     
 }
 #brand::before {
-    background: #004B87;
+    background: #FFCD00;
     content: " ";
     display: block;
     width: 100%;
@@ -38,7 +38,7 @@ body, header, footer {
 
 }
 #brand::after {
-    background: #FFCD00;
+    background: #004B87;
     content: " ";
     display: block;
     width: 100%;

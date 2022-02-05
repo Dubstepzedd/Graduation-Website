@@ -1,0 +1,21 @@
+body {
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.background {
+    background: #dbdfe5;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+#card-header-text {
+    font-size: 2em;
+    margin: 0;
+    color: #022;
+}
+
+.info-text {
+    width: 50vw;
+    word-break: break-word;
+}

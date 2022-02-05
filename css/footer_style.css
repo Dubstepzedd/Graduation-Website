@@ -1,4 +1,7 @@
 footer {
+    
+    font-family: 'Montserrat', sans-serif !important;
+    overflow-x: hidden;
     margin-top: 4em;
     background: #212529;
 }

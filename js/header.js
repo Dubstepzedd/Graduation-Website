@@ -1,5 +1,6 @@
-// Menu icon rotation function
+// Switch Action class.
 
+// Menu icon rotation function
 function changeIcon(el) {
 
     const icon = el.children[0];
@@ -30,7 +31,7 @@ $(window).scroll(function() {
     
     tryTransparentBackground();
 
-  });
+});
 
 function tryTransparentBackground() {
     const header = document.getElementById("menu");
@@ -46,3 +47,5 @@ function tryTransparentBackground() {
         header.classList.add("background-top");
     }
 }
+
+
