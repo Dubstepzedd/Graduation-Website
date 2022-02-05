@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <?php require("components/init_session.php"); ?>
         <title>Student | Studentdagen</title>
         <link rel="icon" href="bilder/mössa.jpg">
         <meta charset="UTF-8">

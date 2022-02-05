@@ -1,14 +1,32 @@
+:root {
+    --rounded: 20px;
+}
+
 body {
+    min-width: 100vw;
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif !important;
 }
 
 .background {
-    background: #dbdfe5;
+  /*  background-image: url("../bilder/kagg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
     min-height: 100vh;
-    min-width: 100vw;
 }
-
+.card-header {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    background: #FFFF;
+    border: 0;
+}
+.card {
+    width: 90vw;
+    max-width: 800px;
+    border-radius: var(--rounded);
+    overflow: hidden;
+}
 #card-header-text {
     font-size: 2em;
     margin: 0;
@@ -18,4 +36,8 @@ body {
 .info-text {
     width: 50vw;
     word-break: break-word;
+}
+
+.btn {
+    border-radius: var(--rounded);
 }

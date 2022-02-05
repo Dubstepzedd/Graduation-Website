@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <?php require("init_session.php"); ?>
         <!--- Ordinary Information -->
         <title>Student | Start</title>
         <link rel="icon" href="bilder/mössa.jpg">
@@ -10,16 +11,24 @@
         <meta name="author" content="Liam Andersson">
         
         <?php require("components/required_imports.php"); ?>
-
         <!--- Index specific links / scripts -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        </script> 
         <link rel="stylesheet" href="css/index_style.css">
         <script src="js/index.js"></script>
 
     </head>
     <body>
         <!--- Header -->
-        <?php  require("components/header.php"); ?>
-    
+        <?php  
+          require("components/header.php"); 
+          include("check_error.php");
+          if(wasSuccessful()) {
+            echo "<div id='successful-header'>Ditt konto är nu registrerat!</div>";
+          }
+        ?>
+
+        
         <div class="container-fluid px-0">
           <!-- Three images at the top -->
           <div class="row align-self-center wrapper">

@@ -1,6 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+        <?php 
+            // --- Here we handle requests to the site. If it does not match the key the user will be sent to index.php
+            require("components/init_session.php");
+            require("components/db_connection.php");
+            //If there is not get request, throw them to index.php.
+            if(!empty($_GET) && isset($_GET["key"])) {
+
+                $key = mysqli_real_escape_string($link,$_GET["key"]);
+                $sql = "SELECT * FROM Link WHERE link.address_key ='$key' limit 1";
+            
+                if($result = mysqli_query($link, $sql)){
+                
+                    if(mysqli_num_rows($result) != 1){
+                        
+                        header("Location: /index.php");
+                        exit;
+                    } 
+                    
+                    $_SESSION["key"] = $key;
+                    //Free the memory
+                    mysqli_free_result($result);
+                    
+                
+                } 
+                else {
+                    header("Location: /index.php");
+                    exit;
+                }
+            
+            }
+            else {
+                header("Location: /index.php");
+                exit;
+            }
+
+            mysqli_close($link);
+        ?>
         <!--- Ordinary Information -->
         <title>Student | Registrera</title>
         <link rel="icon" href="bilder/mössa.jpg">
@@ -21,33 +59,40 @@
         <!-- CSS file -->
         <link rel="stylesheet" href="css/register_style.css">
 
-
     </head>
     <body>
         <div class="container-fluid px-0">
-            <div class="background d-flex align-items-center">
-                <div class="card text-center mx-auto">
-                    <div class="card-header py-3">
-                        <h2 id="card-header-text">FELICIA STUDENT</h2>
+            <div class="d-flex background align-items-center">
+                <div class="card my-4 text-center mx-auto">
+                    <div class="card-header pt-4">
+                        <h2 id="card-header-text">FELICIAS STUDENT</h2>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="register_dbcon.php" method="post">
                             <div class="row">
-                                <div class="col py-3">
+                                <div class="col py-2">
                                     <label class="my-1 mr-2 float-left" for="firstname">Förnamn</label>
-                                    <input type="text" class="form-control" id="firstname" placeholder="...">
+                                     <!-- Bara bokstäver tillåtna a-ö -->
+                                    <input type="text" onkeydown="return /[a-ö]/i.test(event.key)" class="form-control" name="firstname" id="firstname" equired="required" placeholder="...">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col py-3">
                                     <label class="my-1 mr-2 float-left" for="lastname">Efternamn</label>
-                                    <input type="text" class="form-control" id="lastname" placeholder="...">
+                                    <!-- Bara bokstäver tillåtna a-ö -->
+                                    <input type="text" onkeydown="return /[a-ö]/i.test(event.key)" class="form-control" name="lastname" id="lastname" required="required" placeholder="...">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col py-3">
+                                    <label class="my-1 mr-2 float-left" for="email">E-Post</label>
+                                    <input type="email" class="form-control" name="email" id="email" required="required" placeholder="...">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col py-3">
                                     <label class="my-1 mr-2 float-left" for="password">Lösenord</label>
-                                    <input type="password" class="form-control" id="password" placeholder="...">
+                                    <input type="password" class="form-control" name="password" id="password" required="required" placeholder="...">
                                 </div>
                             </div>
                             <div class="row">
@@ -56,14 +101,18 @@
                                     Genom att trycka på "Registera mig" nedan så går du med på att dina uppgifter sparas tills efter
                                     evenemanget är över.
                                 </p>
-                               
                             </div>
 
-                            <button type="submit" class="btn btn-primary mt-4">Registrera mig</button>
+                            <button type="submit" class="btn btn-primary px-2 py-2 mt-4">Registrera mig</button>
+                            <!--- Handle any error -->
+                            <?php 
+                                include("components/check_error.php");
+                                print(isset($_SESSION["error"]));
+                                if(hasErrorOccured()) {
+                                    echo "<p style='color: red' class='my-3'>Något gick fel. Vänligen försök igen eller kontakta <a href='mailto:liam.andersson2002@gmail.com'>liam.andersson2002@gmail.com.</a></p>";
+                                }
+                            ?>
                         </form>
-                    </div>
-                    <div class="card-footer text-muted">
-                        
                     </div>
                 </div>
             </div>
