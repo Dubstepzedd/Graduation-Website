@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php require("components/init_session.php"); ?>
+        <?php 
+            require("components/init_session.php"); 
+            require("components/check_login.php");
+            redirectIfNotLoggedIn("contact.php");
+        ?>
         <title>Student | Kontakt</title>
         <link rel="icon" href="bilder/mössa.jpg">
         <meta charset="UTF-8">

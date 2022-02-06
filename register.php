@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-
         <?php 
             // --- Here we handle requests to the site. If it does not match the key the user will be sent to index.php
             require("components/init_session.php");
@@ -23,14 +22,12 @@
                     $_SESSION["key"] = $key;
                     //Free the memory
                     mysqli_free_result($result);
-                    
-                
+            
                 } 
                 else {
                     header("Location: /index.php");
                     exit;
                 }
-            
             }
             else {
                 header("Location: /index.php");
@@ -68,7 +65,7 @@
                         <h2 id="card-header-text">FELICIAS STUDENT</h2>
                     </div>
                     <div class="card-body">
-                        <form action="register_dbcon.php" method="post">
+                        <form action="register_dbcon.php" method="POST">
                             <div class="row">
                                 <div class="col py-2">
                                     <label class="my-1 mr-2 float-left" for="firstname">Förnamn</label>
@@ -103,14 +100,24 @@
                                 </p>
                             </div>
 
-                            <button type="submit" class="btn btn-primary px-2 py-2 mt-4">Registrera mig</button>
+                            <button type="submit" name="submit" class="btn btn-primary px-2 py-2 mt-4">Registrera mig</button>
+
                             <!--- Handle any error -->
                             <?php 
-                                include("components/check_error.php");
-                                print(isset($_SESSION["error"]));
-                                if(hasErrorOccured()) {
-                                    echo "<p style='color: red' class='my-3'>Något gick fel. Vänligen försök igen eller kontakta <a href='mailto:liam.andersson2002@gmail.com'>liam.andersson2002@gmail.com.</a></p>";
+                            
+                                require("components/check_error.php");
+                                $code = getCode($CODES);
+                               
+                                switch($code) {
+                                    // Possible scenarios.
+                                    case $ERROR_QUERY_FAILED:
+                                        echo "<p style='color: red' class='my-3'>Något gick fel. Vänligen försök igen eller kontakta <a href='mailto:liam.andersson2002@gmail.com'>liam.andersson2002@gmail.com.</a></p>";
+                                        break;
+                                    case $ERROR_USER_ALREADY_EXIST:
+                                        echo "<p style='color: red' class='my-3'>Den angivna e-posten existerar redan i databasen.</p>";
+                                        break;
                                 }
+                     
                             ?>
                         </form>
                     </div>

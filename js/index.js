@@ -18,9 +18,3 @@ $(document).ready(function() {
 
 });
 
-setTimeout(() => {
-    $("#successful-header").slideUp(function() {
-      $("#successful-header").remove();
-    });
-    
-  },3000);

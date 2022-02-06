@@ -1,24 +1,22 @@
 <?php 
-//We assume that a session is present.  
+//We assume that a session is present and that the codes are already defined..  
 
-function hasErrorOccured() {
-
-    if($_SESSION["error"] === true) {
-        $_SESSION["error"] = null;
-        return true;
+function getCode($CODES) {
+    global $NONE;
+    if(isset($_SESSION["code"])) {
+        //A code is set!
+        $code = $_SESSION["code"];
+        
+        if($code < count($CODES)) {
+           
+            $returnValue = $CODES[$code];
+            $_SESSION["code"] = $NONE;
+            return $returnValue;
+        }
     }
-    return false; 
-     
-}
-
-
-function wasSuccessful() {
-    if($_SESSION["error"] === false) {
-        $_SESSION["error"] = null;
-        return true;
-    }  
-
-    return false;
+    
+    throw new Exception("Code has not been set yet.");
+    
 }
 
 ?>
