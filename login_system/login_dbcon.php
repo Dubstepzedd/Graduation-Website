@@ -4,7 +4,7 @@
     
     //Check if the request is POST and that submit is set.
     if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit"])) {
-        print("Hej");
+       
         require($_SERVER['DOCUMENT_ROOT']."/forbidden/db_connection.php");
         // Grab the POST data. $link is from "db_connection.php".
         $email = mysqli_real_escape_string($link,$_POST["email"]);
@@ -53,7 +53,14 @@
 
                     //Move on to the site... You are logged in!
                     $_SESSION["code"] = $SUCCESS_LOGIN;
-                    header("Location: /".$_SESSION["redirect"]);
+                    if(isset($_SESSION["redirect"])) {
+                        header("Location: /".$_SESSION["redirect"]);
+                
+                    }
+                    else {
+                        header("Location: /index.php");
+                    }
+                 
                     exit;
                     
                 }

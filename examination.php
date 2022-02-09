@@ -96,7 +96,7 @@
             </div>
             
             <!-- Space -->
-            <div class="py-5 my-5"></div>
+            <div id="space"></div>
 
             <!-- Party information -->
             <div class="fixed-img-container">
@@ -129,7 +129,7 @@
 
 
             <!-- Registration form -->
-            <div class="card text-center mx-auto">
+            <div class="card mx-auto">
                 <div class="card-header pt-4">
                     <h2 id="card-header-text">Anmälningsformulär</h2>
                 </div>
@@ -151,7 +151,7 @@
                         <div class="form-group">
                             <div class="col py-3">
                                 <label class="my-1 mr-2 float-left" for="guests">Välj antal gäster</label>
-                                <select class="custom-select mr-sm-2" id="guests" required>
+                                <select class="custom-select mr-sm-2" name="guests" id="guests" required>
                                     <option value="">Välj...</option>
                                     <?php 
                                         for($i = 1; $i <= 8; $i++) {
@@ -162,43 +162,67 @@
                             </div>
                         </div>
                         <!-- Radio buttons -->
-                        <div class="form-check form-check-inline pb-3">
-                            <input class="form-check-input" type="radio" name="activity" id="both" value="Firande och utspring" checked>
-                            <label class="form-check-label" for="both">
-                                Kommer på både utspring och firande.
-                            </label>
+                        <div class="col py-2">
+                            <p> Välj en av följande: </p>
                         </div>
-                        <div class="form-check form-check-inline pb-3">
-                            <input class="form-check-input" type="radio" name="activity" id="exam" value="Firande">
-                            <label class="form-check-label" for="exam">
-                                Kommer endast på utspringet.
-                            </label>
+                        <div class="form-group form-check form-check-inline pb-3">
+                            <div class="col py-1 d-flex">
+                                <input class="form-check-input" type="radio" name="status" id="both" value="kommer på firande och utspring" checked>
+                                <label class="form-check-label" for="both">
+                                    Kommer på både utspring och firande.
+                                </label>
+                            </div>
                         </div>
-                        <div class="form-check form-check-inline pb-3">
-                            <input class="form-check-input" type="radio" name="activity" id="celebration" value="Firande">
-                            <label class="form-check-label" for="celebration">
-                                Kommer endast på firandet.
-                            </label>
+                        <div class="form-group form-check form-check-inline pb-3">
+                            <div class="col py-1 d-flex">
+                                <input class="form-check-input" type="radio" name="status" id="exam" value="kommer på utspring">
+                                <label class="form-check-label" for="exam">
+                                    Kommer på utspringet.
+                                </label>
+                            </div>
                         </div>
-                        <div class="form-check form-check-inline pb-3">
-                            <input class="form-check-input" type="radio" name="activity" id="none" value="Inget">
-                            <label class="form-check-label" for="none">
-                                Har tyvärr inte möjlighet att komma.
-                            </label>
+                        <div class="form-group form-check form-check-inline pb-2">
+                            <div class="col py-1 d-flex">
+                                <input class="form-check-input" type="radio" name="status" id="celebration" value="kommer på firande">
+                                <label class="form-check-label" for="celebration">
+                                    Kommer på firandet.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group form-check form-check-inline pb-2">
+                            <div class="col py-1 d-flex">
+                                <input class="form-check-input" type="radio" name="status" id="moment" value="kommer en stund">
+                                <label class="form-check-label" for="moment">
+                                    Kommer förbi en stund.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group form-check form-check-inline pb-2">
+                            <div class="col py-1 d-flex">
+                                <input class="form-check-input" type="radio" name="status" id="none" value="kommer ej">
+                                <label class="form-check-label" for="none">
+                                    Har tyvärr inte möjlighet att komma.
+                                </label>
+                            </div>
                         </div>
                         
+                        
                         <div class="form-group mt-4">
-                            <label for="allergies">Ange Specialkost / Allergier</label>
-                            <textarea class="form-control rounded-1 mx-auto alternative" id="allergies" rows="3"></textarea>
+                            <div class="col py-3">
+                                <label for="allergies">Ange Specialkost / Allergier</label>
+                                <textarea class="form-control rounded-1 alternative" name="allergies" id="allergies" rows="3"></textarea>
+                            </div>
                         </div>
 
                         <div class="form-group mt-4">
-                            <label for="allergies">Övrigt</label>
-                            <textarea class="form-control rounded-1 mx-auto alternative" id="allergies" rows="3"></textarea>
+                            <div class="col py-3">
+                                <label for="general">Övrigt</label>
+                                <textarea class="form-control rounded-1" name="general" id="general" rows="3"></textarea>
+                            </div>
                         </div>
                                         
                         <button type="submit" name="submit" id="submit"class="btn btn-primary mx-auto py-3 mt-5">Skicka min anmälan</button>
-                        <p class="pt-4">Vill du säga några ord på denna festliga dag, kontakta <a href="mailto:malena.bk@live.se">Malena Björneklint.</a></p>
+                        <p class="pt-4 text-center">Vill du säga några ord på denna festliga dag, kontakta <a href="mailto:malena.bk@live.se">Malena Björneklint.</a></p>
 
                         <!--- Handle any error -->
                         <?php 
@@ -208,10 +232,13 @@
                             switch($code) {
                                 // Possible scenarios.
                                 case $ERROR_UNKNOWN:
-                                    echo "<p style='color: red' class='my-3'>Något gick fel. Vänligen försök igen eller kontakta <a href='mailto:liam.andersson2002@gmail.com'>liam.andersson2002@gmail.com.</a></p>";
+                                    echo "<p style='color: red' class='my-3 text-center'>Något gick fel. Vänligen försök igen eller kontakta <a href='mailto:liam.andersson2002@gmail.com'>liam.andersson2002@gmail.com.</a></p>";
                                     break;
-                                case $SUCCESS_VERIFICATION:
-                                    echo "<p style='color: green' class='my-3'>Ditt lösenord är nu bytt.</p>";
+                                case $SUCCESS_MAIL:
+                                    echo "<p style='color: green' class='my-3 text-center'>Din anmälan har skickats!</a> </p>";
+                                    break;
+                                case $ERROR_MAIL_NOT_SENT:
+                                    echo "<p style='color: red' class='my-3 text-center'> Din anmälan skickades ej. Vänligen försök igen eller kontakta <a href='mailto:liam.andersson2002@gmail.com'>liam.andersson2002@gmail.com.</a> </p>";
                                     break;
                             }
                         ?>

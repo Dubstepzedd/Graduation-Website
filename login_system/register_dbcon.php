@@ -44,7 +44,7 @@
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
         //Insert info
-        $add_user_query = "INSERT INTO Guest (firstName,lastName,email,pass) VALUES ('$firstname','$lastname','$email','$hashed_password');";
+        $add_user_query = "INSERT INTO Guest (firstName,lastName,email,pass) VALUES ('$firstName','$lastName','$email','$hashed_password');";
 
         if(mysqli_query($link,$add_user_query)) {
             
