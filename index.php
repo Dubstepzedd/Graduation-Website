@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
     <head>
         <?php 
-          require("components/init_session.php");
-          require("components/check_login.php");
+          require("forbidden/init_session.php");
+          require("forbidden/check_login.php");
           redirectIfNotLoggedIn("index.php");
         
         ?>
         <!--- Ordinary Information -->
         <title>Student | Start</title>
-        <link rel="icon" href="bilder/mössa.jpg">
+        <link rel="icon" href="images/mössa.jpg">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="En sida dedikerad till Felicia Björneklints student 2022">
         <meta name="author" content="Liam Andersson">
         
-        <?php require("components/required_imports.php"); ?>
+        <?php require("forbidden/required_imports.php"); ?>
         <!--- Index specific links / scripts -->
         <link rel="stylesheet" href="css/index_style.css">
         <script src="js/index.js"></script>
@@ -24,11 +24,11 @@
     <body>
         <!--- Header -->
         <?php  
-          require("components/header.php"); 
-          require("components/check_error.php");
+          require("forbidden/header.php"); 
+          require("forbidden/check_error.php");
           
           //If the user is newly logged in / registered we want to show a green header at the top.
-          require("components/login_register_animation.php");
+          require("forbidden/login_register_animation.php");
           
         ?>
 
@@ -44,7 +44,7 @@
               
               <div class="col-4" id="left-image"></div>
               
-              <div class="col-4 align-self-center" id="middle-image"></div>
+              <div class="col-4" id="middle-image"></div>
               
               <div class="col-4" id="right-image"></div>
 
@@ -68,14 +68,14 @@
                   <h2 id="date">Fredagen den 17 Juni</h3>
                   <h3 id="utspring">Utspring: Lars Kaggskolan</h4>
                   <h3 id="fika">Firande & Mat: Mandelblomsvägen 31</h4>
-                  <p id="ytterligare_info">OSA senast 1 Juni via <a href="contact.html">Studentdagen.</a></p>
+                  <p id="ytterligare_info">OSA senast första Juni via formuläret på <a href="examination.php">Studentdagen.</a></p>
                 </div>
               </div>
             </div>
           </div>
         
           <!-- FOOTER -->
-          <?php require("components/footer.php"); ?>
+          <?php require("forbidden/footer.php"); ?>
 
         </div>
        

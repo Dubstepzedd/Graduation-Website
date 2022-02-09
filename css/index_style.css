@@ -2,6 +2,7 @@ body {
     font-family: 'Montserrat', sans-serif !important;
     overflow-x: hidden;
 }
+/*
 #successful-header {
     background: green;
     color: #FFFF;
@@ -9,11 +10,12 @@ body {
     font-weight: bold;
     font-size: 1em;
 }
+*/
 .wrapper {
     position: relative;
 }
 #left-image {
-    background-image: url("../bilder/felicia_liten.jpg");
+    background-image: url("images/felicia_liten.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -26,7 +28,7 @@ body {
         to top,
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.7)
-      ),  url("../bilder/felicia_liten.jpg");
+      ),  url("images/felicia_liten.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -35,7 +37,7 @@ body {
 
 
 #right-image {
-    background-image: url("../bilder/felicia_liten.jpg");
+    background-image: url("images/felicia_liten.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -80,6 +82,7 @@ body {
     padding-top: 30px;
 }
 
+/* Wave styling */
 .custom-shape-divider-bottom-1644017640 {
     position: absolute;
     bottom: 0;
