@@ -4,7 +4,7 @@
             <div class="col-lg-4 col-md-6">
                 <h5 class="text-white footer-title">Kort information</h5>
                 <p class="small text-muted">Den här sidan är dedikerad till Felicia Björneklints student.
-                    All nödvändig information finns tillgänglig på den här sidan. Vänligen se länkarna år höger.
+                    All nödvändig information finns tillgänglig på den här domänen.
                 </p>
                 <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. Liam Andersson</p>
             </div>

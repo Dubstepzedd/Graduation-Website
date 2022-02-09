@@ -42,11 +42,11 @@
             <!-- The  three images at the top -->
             <div class="row align-self-center wrapper">
               
-                <div class="col-4" id="left-image"></div>
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4" id="left-image"></div>
                 
-                <div class="col-4" id="middle-image"></div>
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4" id="middle-image"></div>
                 
-                <div class="col-4" id="right-image"></div>
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" id="right-image"></div>
 
 
                 <!-- Thank you ShadeDivider [https://www.shapedivider.app/] for providing this tool.  -->
@@ -169,8 +169,8 @@
                             </label>
                         </div>
                         <div class="form-check form-check-inline pb-3">
-                            <input class="form-check-input" type="radio" name="activity" id="examination" value="Utspring">
-                            <label class="form-check-label" for="examination">
+                            <input class="form-check-input" type="radio" name="activity" id="exam" value="Firande">
+                            <label class="form-check-label" for="exam">
                                 Kommer endast på utspringet.
                             </label>
                         </div>

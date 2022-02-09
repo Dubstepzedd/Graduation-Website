@@ -1,4 +1,4 @@
-body {
+body, html {
     font-family: 'Montserrat', sans-serif !important;
     overflow-x: hidden;
 }
@@ -76,7 +76,7 @@ body {
     margin:15px;
     font-weight:bold;
     background: rgb(0,75,135);
-background: linear-gradient(0deg, rgba(0,75,135,1) 50%, rgba(255,205,0,1) 50%);
+    background: linear-gradient(0deg, rgba(0,75,135,1) 50%, rgba(255,205,0,1) 50%);
     background-clip: text;
     color: transparent;
     -webkit-background-clip: text;
@@ -103,7 +103,7 @@ h1.student-text:hover {
 }
 
 
-/* School location information  */
+/* Parallax backgrounds & information  */
 
 .background {
     user-select: none;
@@ -113,27 +113,39 @@ h1.student-text:hover {
 }
 
 #school-background {
-    background: url("../images/kagg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../images/kagg.jpg") no-repeat center center fixed;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 #party-background {
-    background: url("../images/kalmar.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../images/kalmar.jpg") no-repeat center center fixed;
     background-size: cover;
-    background-attachment: fixed;
 }
 
+@media (max-device-width: 1366px) {
+    #school-background {
+        background-attachment: scroll;
+    }
+    #party-background {
+        background-attachment: scroll;
+    }
+}
+
+
 .info-text {
+    text-align: center;
+    font-size: 1.75rem;
     background: rgb(0, 0, 0); /* Fallback color */
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    width: 80%;
+    background: rgba(0, 0, 0, 0.75); /* Black background with 0.5 opacity */
+    width: 70%;
     color: white;
     padding: 0.5rem;
+}
+
+@media (max-device-width: 400px) {
+    .info-text {
+        font-size: 1.25rem;
+    }
 }
 
 .fixed-img-container {
@@ -197,6 +209,12 @@ h1.student-text:hover {
     background: #FFFF;
     border: 0;
 }
+
+@media (max-width: 420px) {
+    .card-header {
+        font-size: 0.75rem;
+    }
+}
 .card {
     margin-top: 10em;
     width: 90vw;
@@ -213,7 +231,9 @@ p > a {
     color: rgb(1, 15, 212);
     text-decoration: underline;
 }
-
+input[type="radio"][name="activity"] {
+    float: left;
+}
 #submit {
     display: block;
     max-width: 800px;

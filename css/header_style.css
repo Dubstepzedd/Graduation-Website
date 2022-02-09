@@ -1,7 +1,5 @@
-
 header {
     font-family: 'Montserrat', sans-serif !important;
-    overflow-x: hidden;
 }
 
 .background-top {
@@ -26,6 +24,7 @@ header {
 
 
 #brand {
+    user-select: none;
     font-size: 1.20em;
     
 }

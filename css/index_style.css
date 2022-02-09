@@ -1,21 +1,13 @@
-body {
+body,html {
     font-family: 'Montserrat', sans-serif !important;
     overflow-x: hidden;
 }
-/*
-#successful-header {
-    background: green;
-    color: #FFFF;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1em;
-}
-*/
+
 .wrapper {
     position: relative;
 }
 #left-image {
-    background-image: url("images/felicia_liten.jpg");
+    background-image: url("../images/felicia_liten.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -28,7 +20,7 @@ body {
         to top,
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.7)
-      ),  url("images/felicia_liten.jpg");
+      ),  url("../images/felicia_liten.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -37,7 +29,7 @@ body {
 
 
 #right-image {
-    background-image: url("images/felicia_liten.jpg");
+    background-image: url("../images/felicia_liten.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
