@@ -39,27 +39,24 @@
             
             if(sendMail($email,$sub,$message_HTML, $message_HTML)) {
                 $_SESSION["code"] = $SUCCESS_MAIL;
-                header("Location: /examination.php");
+                header("Location: /examination.php#register-form");
                 exit;
             }
             else {
                 $_SESSION["code"] = $ERROR_MAIL_NOT_SENT;
-                header("Location: /examination.php");
+                header("Location: /examination.php#register-form");
                 exit;
             }
         }
-        else {
-            //The template does not exist.
-            $_SESSION["code"] = $ERROR_UNKNOWN;
-            header("Location: /examination.php");
-            exit;
-        }
+      
+        //The template does not exist.
+        //Go to the code below.
 
     }
     
     //Inte en POST request
     $_SESSION["code"] = $ERROR_UNKNOWN;
-    header("Location: /examination.php");
+    header("Location: /examination.php#register-form");
     exit;
 
 

@@ -1,0 +1,132 @@
+body, html {
+    font-family: 'Montserrat', sans-serif !important;
+    overflow-x: hidden;
+    /*background: url("../images/kalmar.jpg") no-repeat center center;*/
+    /*background-size: cover; */
+
+}
+
+
+/* Images */
+.wrapper {
+    position: relative;
+}
+#left-image {
+    background-image: url("../images/felicia_liten.jpg");
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#middle-image {
+    /* Gradient implemented in order to make the text more visible */
+    background-image: url("../images/felicia_liten.jpg");
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#right-image {
+    background-image: url("../images/felicia_liten.jpg");
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Wave styling */
+.custom-shape-divider-bottom-1644017640 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1644017640 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 30px;
+}
+
+.custom-shape-divider-bottom-1644017640 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+.text-container {
+    color: #022;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15vh;
+    max-width: 700px;
+}
+
+.text-container > h1 {
+    color: #022;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.description {
+    color: #022;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5vh;
+    max-width: 700px;
+}
+
+
+.card {
+    margin-top: 10em;
+    width: 90vw;
+    max-width: 1400px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.card-header {
+    border: 0;
+    background-color: #FFFF;
+}
+
+#card-header-text {
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+    color: #022;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+label {
+    user-select: none;
+}
+@media (max-width: 420px) {
+    #card-header-text {
+        font-size: 1.5rem;
+    }
+}
+p > a {
+    color: rgb(1, 15, 212);
+    text-decoration: underline;
+}
+.form-check-label {
+   margin-top: -6px;
+}
+
+#submit {
+    display: block;
+    max-width: 800px;
+    width: 65%;
+    border-radius: 20px;
+}
+
+.form-check {
+    user-select: none;
+}

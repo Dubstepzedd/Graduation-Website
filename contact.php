@@ -19,7 +19,13 @@
     </head>
     <body>
         <!-- Header -->
-        <?php require("forbidden/header.php"); ?>
+        <?php 
+            require("forbidden/header.php"); 
+            require("forbidden/check_error.php");
+            
+            //If the user is newly logged in / registered we want to show a green header at the top.
+            require("forbidden/login_register_animation.php");
+        ?>
 
         <!--- TEMPORARY SPACE -->
         <div class="space"></div>

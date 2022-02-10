@@ -1,4 +1,3 @@
-<!--- This file needs to be imported in a head --->
 <!-- We assume that a session has started before hand -->
 <style>
 
@@ -30,14 +29,16 @@
 
 <?php
     //Display message if logged in / newly registered.
-
-    switch(getCode($CODES)) {
+    $code = getCode($CODES);
+    switch($code) {
         case $SUCCESS_LOGIN:
             print("<div id='successful-header'>Du är nu inloggad.</div>");
             break;
         case $SUCCESS_REGISTER:
             print("<div id='successful-header'>Du är nu registrerad.</div>");
             break;
+        default:
+            $_SESSION["code"] = $code;
     }
     
 ?>

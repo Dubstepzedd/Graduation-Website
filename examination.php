@@ -15,6 +15,7 @@
         <?php require("forbidden/required_imports.php"); ?>
         <!-- Examination specific links / scripts -->
         <link rel="stylesheet" href="css/examination_style.css">
+
         <!--- Handle Radiobuttons in form -->
         <script type="text/javascript">
             $(document).ready(function(){
@@ -32,10 +33,16 @@
 
         </script>
     </head>
+
     <body>
         <!-- Header -->
-        <?php require("forbidden/header.php"); ?>
-
+        <?php 
+            require("forbidden/header.php"); 
+            require("forbidden/check_error.php");
+            
+            //If the user is newly logged in / registered we want to show a green header at the top.
+            require("forbidden/login_register_animation.php");
+        ?>
         <!--- Main body --->
         <div class="container-fluid px-0">
 
@@ -127,14 +134,13 @@
 
 
 
-
             <!-- Registration form -->
             <div class="card mx-auto">
                 <div class="card-header pt-4">
                     <h2 id="card-header-text">Anmälningsformulär</h2>
                 </div>
                 <div class="card-body">
-                    <form action="examination_dbcon.php" method="POST">
+                    <form action="examination_dbcon.php" id="register-form" method="POST">
                         <!--- Basic information -->
                         <div class="form-group">
                             <div class="col py-3">
@@ -226,9 +232,7 @@
 
                         <!--- Handle any error -->
                         <?php 
-                            include($_SERVER['DOCUMENT_ROOT']."/forbidden/check_error.php");
                             $code = getCode($CODES);
-                        
                             switch($code) {
                                 // Possible scenarios.
                                 case $ERROR_UNKNOWN:
