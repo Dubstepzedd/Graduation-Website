@@ -3,10 +3,10 @@
     same website. */
 
     function redirectIfNotLoggedIn($name) {
-        
+        $_SESSION["redirect"] = $name;  //We set this here because of the technical mail. It always have  to know the site.
+
         if(!isset($_SESSION["firstName"]) || !isset($_SESSION["lastName"]) || !isset($_SESSION["email"])) {
-            $_SESSION["redirect"] = $name;  //Spara dit användaren ville
-            header("Location: login_system/login.php");  //Logga in för att komma till den här sidan.
+            header("Location: login_system/login.php");  //Log in to get to the redirected site.
             exit;
         }
     }

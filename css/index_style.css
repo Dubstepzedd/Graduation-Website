@@ -7,7 +7,7 @@ body,html {
     position: relative;
 }
 #left-image {
-    background-image: url("../images/felicia_liten.jpg");
+    background-image: url("../images/felicia_påsk.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@ body,html {
         to top,
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.7)
-      ),  url("../images/felicia_liten.jpg");
+      ),  url("../images/felicia_bära.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@ body,html {
 
 
 #right-image {
-    background-image: url("../images/felicia_liten.jpg");
+    background-image: url("../images/felicia_vuxen.JPG");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;

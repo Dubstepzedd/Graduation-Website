@@ -18,6 +18,7 @@
         <?php require("forbidden/required_imports.php"); ?>
         <!--- Index specific links / scripts -->
         <link rel="stylesheet" href="css/index_style.css">
+        <link rel="stylesheet" href="css/fade_in.css">
         <script src="js/index.js"></script>
         
     </head>
@@ -68,7 +69,7 @@
                   <h2 id="date">Fredagen den 17 Juni</h3>
                   <h3 id="utspring">Utspring: Lars Kaggskolan</h4>
                   <h3 id="fika">Firande & Mat: Mandelblomsvägen 31</h4>
-                  <p id="ytterligare_info">OSA senast första Juni via formuläret på <a href="examination.php">Studentdagen.</a></p>
+                  <p id="ytterligare_info">OSA senast första Juni via formuläret på <a href="examination.php#register-form">Studentdagen.</a></p>
                 </div>
               </div>
             </div>

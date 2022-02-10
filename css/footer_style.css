@@ -29,6 +29,9 @@ border-color: #545454;
 background: #212529;
 }
 
+#msg {
+    color: rgb(187, 187, 187) !important;
+}
 
 .footer-title {
     text-decoration-thickness: 1px !important;

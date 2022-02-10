@@ -6,7 +6,7 @@
                 <p class="small text-muted">Den här sidan är dedikerad till Felicia Björneklints student.
                     All nödvändig information finns tillgänglig på den här domänen.
                 </p>
-                <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. Liam Andersson</p>
+                <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. Björneklint</p>
             </div>
             <div class="col-lg-2 col-md-6">
                 <h5 class="text-white mb-3 footer-title">Länkar</h5>
@@ -22,10 +22,10 @@
                 <p class="small text-muted">
                     Upplever du något problem med sidan? Beskriv ditt problem nedan så åtgärdar vi det så fort vi kan!
                 </p>
-                <form action="#">
+                <form action="/technical_issues.php" method="POST">
                     <div class="input-group mb-3">
-                        <input class="form-control" type="text" placeholder="Meddelande" aria-label="Meddelande" aria-describedby="button-addon2">
-                        <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
+                        <input class="form-control" type="text" placeholder="Meddelande" aria-label="Meddelande" aria-describedby="button-addon2" id="msg" name="msg">
+                        <button class="btn btn-primary" name="submit" type="submit"><i class="fas fa-paper-plane"></i></button>
                     </div>
                 </form>
             </div>

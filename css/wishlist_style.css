@@ -12,7 +12,7 @@ body, html {
     position: relative;
 }
 #left-image {
-    background-image: url("../images/felicia_liten.jpg");
+    background-image: url("../images/felicia_toa.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@ body, html {
 
 #middle-image {
     /* Gradient implemented in order to make the text more visible */
-    background-image: url("../images/felicia_liten.jpg");
+    background-image: url("../images/felicia_party.JPG");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,7 +30,7 @@ body, html {
 
 
 #right-image {
-    background-image: url("../images/felicia_liten.jpg");
+    background-image: url("../images/felicia_mat.JPG");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;

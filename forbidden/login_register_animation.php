@@ -1,13 +1,21 @@
 <!-- We assume that a session has started before hand -->
 <style>
 
-    #successful-header {
+    .successful-header {
         background: green;
         color: #FFFF;
         text-align: center;
         font-weight: bold;
         font-size: 1em;
     }
+    .not-successful-header {
+        background: red;
+        color: #FFFF;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1em;
+    }
+
 
 </style>
 
@@ -19,8 +27,8 @@
 
     //What if the div does not exist?
     setTimeout(() => {
-        $("#successful-header").slideUp(function() {
-            $("#successful-header").remove();
+        $(".successful-header").slideUp(function() {
+            $(".successful-header").remove();
         });
 
     },3000);
@@ -32,10 +40,16 @@
     $code = getCode($CODES);
     switch($code) {
         case $SUCCESS_LOGIN:
-            print("<div id='successful-header'>Du är nu inloggad.</div>");
+            print("<div class='successful-header'>Du är nu inloggad.</div>");
             break;
         case $SUCCESS_REGISTER:
-            print("<div id='successful-header'>Du är nu registrerad.</div>");
+            print("<div class='successful-header'>Du är nu registrerad.</div>");
+            break;
+        case $SUCCESS_TECHNICAL_MAIL_SENT:
+            print("<div class='successful-header'>Ditt meddelande har skickats!</div>");
+            break;
+        case $ERROR_TECHNICAL_MAIL_NOT_SENT:
+            print("<div class='not-successful-header'>Ditt meddelande skickades ej.</div>");
             break;
         default:
             $_SESSION["code"] = $code;

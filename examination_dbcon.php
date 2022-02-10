@@ -1,6 +1,6 @@
 <?php
     //Require a session
-    require($_SERVER['DOCUMENT_ROOT']."/forbidden/init_session.php");
+    require("forbidden/init_session.php");
     //Check that it's a post and that it was submitted by the page
 
     if($_SERVER["REQUEST_METHOD"] === "POST"  && isset($_POST["submit"]) ) {
@@ -22,7 +22,7 @@
         }
 
         // Send email with template
-        $file = $_SERVER['DOCUMENT_ROOT'] . "/mail_templates/registration.html";
+        $file = "mail_templates/registration.html";
     
         if(file_exists($file)) {
             $message_HTML = file_get_contents($file);

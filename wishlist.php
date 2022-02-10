@@ -15,6 +15,7 @@
         <?php require("forbidden/required_imports.php"); ?>
         <!-- Examination specific links / scripts -->
         <link rel="stylesheet" href="css/wishlist_style.css">
+        <link rel="stylesheet" href="css/fade_in.css">
         
     </head>
     <body>
