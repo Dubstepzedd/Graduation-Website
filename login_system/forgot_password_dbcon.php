@@ -60,6 +60,7 @@
                 exit;
             }
             
+            mysqli_free_result($result);
         }
         else {
             //Query failed.

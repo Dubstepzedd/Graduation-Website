@@ -25,7 +25,7 @@ background: #212529;
 border-color: #545454;
 }
 
-.form-control:focus {
+#msg:focus {
 background: #212529;
 }
 

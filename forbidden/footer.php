@@ -15,6 +15,7 @@
                     <li><a href="examination.php"  class="small">Studentdagen</a></li>
                     <li><a href="contact.php" class="small">Önskelista</a></li>
                     <li><a href="contact.php" class="small">Kontakt</a></li>
+                    <li><a href="account.php" class="small">Mitt Konto</a></li>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6">

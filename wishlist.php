@@ -73,7 +73,7 @@
                 </section>
 
                 <section>
-                    <!-- Registration form -->
+                    <!-- Gift form -->
                     <div class="card mx-auto mt-5">
                         <div class="card-header pt-4">
                             <h2 id="card-header-text">Presentlista</h2>
@@ -115,6 +115,7 @@
                                                 }
                                             }
                                         }
+                                        mysqli_free_result($result);
                                     }
                                     else {
                                         //Query failed
@@ -123,10 +124,8 @@
                                 
                                 ?>
                                 
-
-
-                                <button type="submit" name="submit" id="submit"class="btn btn-primary mx-auto py-3 mt-6">Skicka min anmälan</button>
-                                <p class="pt-4 text-center">Om du har strukit över ett objekt men ångrar dig, kontakta <a href="mailto:malena.bk@live.se">Malena Björneklint.</a></p>
+                                <button type="submit" name="submit" id="submit" class="btn btn-primary mx-auto py-3 mt-6">Skicka min anmälan</button>
+                                <p class="pt-4 text-center">Om du har strukit över ett objekt men ångrar dig, se <a href="account.php">Mitt Konto</a></p>
                             
                                 <!--- Handle any error -->
                                 <?php 

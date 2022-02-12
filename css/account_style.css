@@ -1,9 +1,6 @@
-body, html {
+body,html {
     font-family: 'Montserrat', sans-serif !important;
     overflow-x: hidden;
-    /*background: url("../images/kalmar.jpg") no-repeat center center;*/
-    /*background-size: cover; */
-
 }
 
 /* Images */
@@ -59,74 +56,57 @@ body, html {
 }
 
 
-.text-container {
-    color: #022;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 15vh;
-    max-width: 700px;
-}
-
-.text-container > h1 {
-    color: #022;
+#page-header {
     text-decoration: underline;
-    text-underline-offset: 3px;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
 }
 
-.description {
-    color: #022;
-    text-align: center;
+.page-info {
     margin: 0 auto;
-    margin-top: 5vh;
     max-width: 700px;
 }
 
-
-.card {
-    margin-top: 10em;
-    width: 90vw;
-    max-width: 1400px;
-    overflow: hidden;
-    border-radius: 20px;
+/* Cards */
+.form-control, .form-control:focus,.form-control.hover {
+    background: #FFFF;
 }
 
 .card-header {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+    background: #FFFF;
     border: 0;
-    background-color: #FFFF;
 }
-
+.card {
+    width: 90vw;
+    max-width: 800px;
+    border-radius: 20px;
+    overflow: hidden;
+}
 #card-header-text {
-    text-align: center;
     font-size: 2em;
     margin: 0;
     color: #022;
-    text-decoration: underline;
-    text-underline-offset: 5px;
 }
-label {
-    user-select: none;
-}
-@media (max-width: 420px) {
-    #card-header-text {
-        font-size: 1.5rem;
-    }
-}
-p > a {
+
+#forgot-password {
     color: rgb(1, 15, 212);
-    text-decoration: underline;
+    display: block;
+    text-decoration: none;
+    
 }
-.form-check-label {
-   margin-top: -6px;
+
+#btn {
+    width: 50%;
+    border-radius: var(--rounded);
 }
 
 #submit {
-    margin-top: 10vh;
     display: block;
     max-width: 800px;
     width: 65%;
     border-radius: 20px;
 }
 
-.form-check {
-    user-select: none;
-}

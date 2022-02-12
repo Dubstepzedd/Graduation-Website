@@ -20,8 +20,9 @@
                 ?>
                 <a class="nav-item nav-link <?php if ($file == 'index') echo 'active'; ?>" href="index.php">Hem</a>
                 <a class="nav-item nav-link <?php if ($file == 'examination') echo 'active'; ?>" id="examination" href="examination.php">Studentdagen</a>
-                <a class="nav-item nav-link <?php if ($file == 'wishlist') echo 'active'; ?>" id="contact" href="wishlist.php">Önskelista</a>
+                <a class="nav-item nav-link <?php if ($file == 'wishlist') echo 'active'; ?>" id="wishlist" href="wishlist.php">Önskelista</a>
                 <a class="nav-item nav-link <?php if ($file == 'contact') echo 'active'; ?>" id="contact" href="contact.php">Kontakt</a>   
+                <a class="nav-item nav-link <?php if ($file == 'account') echo 'active'; ?>" id="account" href="account.php">Mitt Konto</a>   
             </div>
         </div>
     </nav>

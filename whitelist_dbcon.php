@@ -5,10 +5,13 @@
 
     if($_SERVER["REQUEST_METHOD"] === "POST"  && isset($_POST["submit"]) ) {
 
-        if(isset($_POST['gift']) && is_array($_POST['gift']) ) {
-            $selectedGifts = $_POST["gift"];
+        if(isset($_POST["gift"]) && is_array($_POST["gift"]) ) {
             //Set up connection
             require("forbidden/db_connection.php");
+            $selectedGifts = array_map(function( $element ) use ($link) {
+                return mysqli_real_escape_string($link, $element);
+            }, $_POST["gift"]);
+            
             $email = $_SESSION["email"];
 
             $getGuestId = "SELECT id FROM Guest WHERE email = '$email'";
@@ -38,7 +41,9 @@
                 
                 
                 }
-                //No email in database, however this is not possible...
+                //No email in database, however this is not possible. Continue down the page to the error.
+
+                mysqli_free_result($result);
             }
             //Code that ends here go down to ERROR_UNKNOWN. (Query failed)
         }

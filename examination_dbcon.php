@@ -4,13 +4,13 @@
     //Check that it's a post and that it was submitted by the page
 
     if($_SERVER["REQUEST_METHOD"] === "POST"  && isset($_POST["submit"]) ) {
-        
+        require("forbidden/db_connection.php");
         //Get the data
-        $firstName = $_POST["firstName"];
-        $lastName = $_POST["lastName"];
-        $numberOfGuests = $_POST["guests"];
-        $status = $_POST["status"];
-        $comment = $_POST["general"];
+        $firstName =  mysqli_real_escape_string($link, $_POST["firstName"]);
+        $lastName =  mysqli_real_escape_string($link, $_POST["lastName"]);
+        $numberOfGuests =  mysqli_real_escape_string($link,$_POST["guests"]);
+        $status =  mysqli_real_escape_string($link,$_POST["status"]);
+        $comment =  mysqli_real_escape_string($link,$_POST["general"]);
 
         //If the activity is "nothing" we want to ignore the allergies.
         if($activity === "kommer ej") {
@@ -18,7 +18,7 @@
         }
 
         else {
-            $allergies = $_POST["allergies"];
+            $allergies =  mysqli_real_escape_string($link,$_POST["allergies"]);
         }
 
         // Send email with template

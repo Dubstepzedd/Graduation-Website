@@ -58,7 +58,6 @@
                         
                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" id="right-image"></div>
 
-
                         <!-- Thank you ShadeDivider [https://www.shapedivider.app/] for providing this tool.  -->
                         <div class="custom-shape-divider-bottom-1644017640">
                             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -155,13 +154,13 @@
                                 <div class="form-group">
                                     <div class="col py-3">
                                         <label class="my-1 mr-2 float-left" for="firstName">Förnamn</label>
-                                        <input type="text" class="form-control" name="firstName" id="firstName" required="required" value="<?php print($_SESSION["firstName"]);?>" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}">
+                                        <input type="text" class="form-control" name="firstName" id="firstName" required="required" value="<?php print($_SESSION["firstName"]);?>" readonly>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col py-3">
                                         <label class="my-1 mr-2 float-left" for="lastName">Efternamn</label>
-                                        <input type="text" class="form-control" name="lastName" id="lastName" required="required" value="<?php print($_SESSION["lastName"]);?>" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}">
+                                        <input type="text" class="form-control" name="lastName" id="lastName" required="required" value="<?php print($_SESSION["lastName"]);?>"  readonly>
                                     </div>
                                 </div>
                                 <div class="form-group">

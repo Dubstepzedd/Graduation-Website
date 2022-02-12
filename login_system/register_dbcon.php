@@ -69,6 +69,7 @@
                     $_SESSION["firstName"] = $firstName;
                     $_SESSION["lastName"] = $lastName;
                     $_SESSION["email"] = $email;
+                    $_SESSION["admin"] = 0; //Do not give any admin privilege. The query above sets 0 as default.
 
                     //Unset the link and send the user to the frontpage.
                     unset($_SESSION["key"]);

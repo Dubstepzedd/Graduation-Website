@@ -8,7 +8,8 @@
     if($_SERVER["REQUEST_METHOD"] === "POST"  && isset($_POST["submit"]) ) {
         
         require("forbidden/mailer.php");
-        $message = $_POST["msg"];
+        require("forbidden/db_connection.php");
+        $message =  mysqli_real_escape_string($link,$_POST["msg"]);
         $sub = '=?UTF-8?B?'.base64_encode("Tekniska problem med student sidan").'?=';
     
         if(sendMail("Liam.andersson2002@gmail.com",$sub,$message,$message)){

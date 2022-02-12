@@ -51,6 +51,12 @@
         case $ERROR_TECHNICAL_MAIL_NOT_SENT:
             print("<div class='not-successful-header'>Ditt meddelande skickades ej.</div>");
             break;
+        case $ERROR_CHANGE:
+            print("<div class='not-successful-header'>Något gick fel med din förfrågan.</div>");
+            break;
+        case $SUCCESS_CHANGE:
+            print("<div class='successful-header'>Dina uppgifter har ändrats.</div>");
+            break;
         default:
             $_SESSION["code"] = $code;
     }

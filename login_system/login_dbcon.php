@@ -13,7 +13,7 @@
             $password = mysqli_real_escape_string($link,$_POST["password"]);
 
             //We check if there is a user with the email $email.
-            $getUser = "SELECT firstName,lastName,pass FROM guest WHERE email = '$email'";
+            $getUser = "SELECT firstName,lastName,pass,admin FROM guest WHERE email = '$email'";
 
             if($result = mysqli_query($link,$getUser)) {
                 
@@ -33,6 +33,7 @@
                         $_SESSION["firstName"] = $row["firstName"];
                         $_SESSION["lastName"] = $row["lastName"];
                         $_SESSION["email"] = $email;
+                        $_SESSION["admin"] = $row["admin"];
                         
                         //Does the password in the database need rehashing?
                         if(password_needs_rehash($retrievedPassword,PASSWORD_BCRYPT)) {
