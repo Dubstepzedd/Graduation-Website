@@ -1,5 +1,5 @@
 <?php
-    //Sends a message to my email. The message sender is in the footer.
+    //Sends a message to the developer's email. The message sender is in the footer.
     //Require a session
     require("forbidden/init_session.php");
     $cameFrom = "/".$_SESSION["redirect"];

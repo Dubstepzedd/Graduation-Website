@@ -17,7 +17,7 @@ body, html {
 
 #middle-image {
     /* Gradient implemented in order to make the text more visible */
-    background-image: url("../images/felicia_party.JPG");
+    background-image: url("../images/felicia_påsk.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -201,7 +201,7 @@ h1.student-text:hover {
 
 
 /* Registration Form */
-body > .form-control, body >  .form-control:focus, body >  .form-control.hover {
+.form-control, .form-control:focus,.form-control.hover {
     background: #FFFF;
 }
 .card-header {
