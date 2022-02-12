@@ -79,7 +79,7 @@
                             <h2 id="card-header-text">Presentlista</h2>
                         </div>
                         <div class="card-body">
-                            <form action="whitelist_dbcon.php" id="gift-form" method="POST">  
+                            <form action="wishlist_dbcon.php" id="gift-form" method="POST">  
                                 <?php
                                     // Print the gifts in the database.
                                     require("forbidden/db_connection.php");
