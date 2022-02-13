@@ -13,7 +13,7 @@
             $password = mysqli_real_escape_string($link,$_POST["password"]);
 
             //We check if there is a user with the email $email.
-            $getUser = "SELECT firstName,lastName,pass,admin FROM guest WHERE email = '$email'";
+            $getUser = "SELECT firstName,lastName,pass,admin FROM Guest WHERE email = '$email'";
 
             if($result = mysqli_query($link,$getUser)) {
                 

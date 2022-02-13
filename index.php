@@ -1,13 +1,13 @@
+<?php 
+  //Require a session and ensure that the visitor is logged in.
+  require("forbidden/init_session.php");
+  require("forbidden/check_login.php");
+  redirectIfNotLoggedIn("index.php");
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        <?php 
-          //Require a session and ensure that the visitor is logged in.
-          require("forbidden/init_session.php");
-          require("forbidden/check_login.php");
-          redirectIfNotLoggedIn("index.php");
-        
-        ?>
         <!--- Ordinary Information -->
         <title>Student | Start</title>
         <link rel="icon" href="images/mössa.jpg">
@@ -74,7 +74,7 @@
                       <h2 id="date">Fredagen den 17 Juni</h3>
                       <h3 id="utspring">Utspring: Lars Kaggskolan</h4>
                       <h3 id="fika">Firande & Mat: Mandelblomsvägen 31</h4>
-                      <p id="ytterligare_info">OSA senast första Juni via formuläret på <a href="examination.php#register-form">Studentdagen.</a></p>
+                      <p id="ytterligare_info">OSA senast 1:a Juni på <a href="examination.php#register-form">Studentdagen.</a></p>
                     </div>
                   </div>
                 </div>

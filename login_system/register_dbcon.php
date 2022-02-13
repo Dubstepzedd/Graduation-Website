@@ -10,7 +10,7 @@
 
             //Check that GET key is valid before regisration.
             $key = $_SESSION["key"];
-            $sql = "SELECT * FROM Link WHERE link.address_key ='$key' limit 1";
+            $sql = "SELECT * FROM Link WHERE Link.address_key ='$key' limit 1";
                 
             if($result = mysqli_query($link, $sql)){
             
@@ -54,7 +54,7 @@
             $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
             //Insert info
-            $add_user_query = "INSERT INTO Guest (firstName,lastName,email,pass) VALUES ('$firstName','$lastName','$email','$hashed_password');";
+            $add_user_query = "INSERT INTO Guest (firstName,lastName,email,pass) VALUES ('$firstName','$lastName','$email','$hashed_password')";
 
             if(mysqli_query($link,$add_user_query)) {
                 
@@ -77,6 +77,7 @@
                     exit;
                 
                 }
+
                 /*
                     Here is an issue. We have added a new Guest, but failed to delete the link.
                     We will therefore delete the newly added Guest.
@@ -114,7 +115,7 @@
 
     //Wrong method call, someone is trying to breach the website from another source?
     $_SESSION["code"] = $ERROR_UNKNOWN;
-    header("Location: login.php");
-    exit;
+    //header("Location: login.php");
+    //exit;
     
 ?>

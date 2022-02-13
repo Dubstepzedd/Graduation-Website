@@ -54,7 +54,7 @@
                     }, $_POST["gift"]);
                    
                     foreach($selectedGifts as $giftName) {
-                        print($giftName);
+                        
                         $updateGift = "UPDATE Gift SET guest_id = NULL, taken=0  WHERE name = '$giftName' AND taken=1";
                         if(!mysqli_query($link,$updateGift)) {
                             //Query Failed

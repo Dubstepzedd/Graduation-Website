@@ -17,7 +17,7 @@ body,html {
 
 #middle-image {
     /* Gradient implemented in order to make the text more visible */
-    background-image: url("../images/felicia_påsk.JPG");
+    background-image: url("../images/felicia_påsk.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@ body,html {
 
 
 #right-image {
-    background-image: url("../images/felicia_mat.JPG");
+    background-image: url("../images/felicia_gas.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;

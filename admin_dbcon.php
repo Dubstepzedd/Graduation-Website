@@ -20,7 +20,7 @@
 
                 if(mysqli_query($link,$addCode)) {
                     //Link was added successfully.
-                    $_SESSION["generatedCode"] = "http://DOMAIN/login_system/register.php?key=".$code;
+                    $_SESSION["generatedCode"] = "https://feliciastudent.se/login_system/register.php?key=".$code;
                     $_SESSION["code"] = $SUCCESS_CHANGE;
                     header("Location: account.php");
                     exit;
@@ -150,7 +150,7 @@
         $i = 1;
         $pass = '' ;
 
-        while ($i <= 10) {
+        while ($i <= 20) {
             $num = rand() % 33;
             $tmp = substr($chars, $num, 1);
             $pass = $pass . $tmp;

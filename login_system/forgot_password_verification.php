@@ -1,17 +1,18 @@
+<?php 
+    //Require a session
+    require($_SERVER['DOCUMENT_ROOT']."/forbidden/init_session.php");
+
+    //If a request to this page was not made by forgot_password.php, then send them back to that page.
+    if(!isset($_SESSION["verification"]) && !$_SESSION["verification"]) {
+        header("Location: forgot_password.php");
+        exit;
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        <?php 
-            //Require a session
-            require($_SERVER['DOCUMENT_ROOT']."/forbidden/init_session.php");
-
-            //If a request to this page was not made by forgot_password.php, then send them back to that page.
-            if(!isset($_SESSION["verification"]) && !$_SESSION["verification"]) {
-                header("Location: forgot_password.php");
-                exit;
-            }
-
-        ?>
         <!--- Ordinary Information -->
         <title>Student | Glömt Lösenord Verifikation</title>
         <link rel="icon" href="../images/mössa.jpg">

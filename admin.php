@@ -255,7 +255,7 @@
                 </div>
 
                 <button type="submit" name="submit" id="submit" class="btn btn-primary px-2 mx-auto py-2 mt-4">Ta bort</button>
-                <p>Notera att det du skriver in är skiftlägekänsligt!</p>
+                <p class="mt-3">Notera att det du skriver in är skiftlägekänsligt!</p>
             </form>
         </div>
     </div>

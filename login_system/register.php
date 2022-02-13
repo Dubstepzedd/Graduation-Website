@@ -1,47 +1,51 @@
+<?php 
+   
+    /* 
+        Here we handle requests to the site. If it does not match the key 
+        the user will be sent to index.php (which will send the user to the login page) 
+    */
+    
+    require($_SERVER['DOCUMENT_ROOT']."/forbidden/init_session.php");
+    //If there is no "correct" get request or not a get request at all, throw them to index.php.
+    if(!empty($_GET) && isset($_GET["key"])) {
+        //Require imports
+        require($_SERVER['DOCUMENT_ROOT']."/forbidden/db_connection.php");
+
+        $key = mysqli_real_escape_string($link,$_GET["key"]);
+        $sql = "SELECT * FROM Link WHERE Link.address_key ='$key' limit 1";
+
+        if($result = mysqli_query($link, $sql)){
+           
+            if(mysqli_num_rows($result) != 1){
+                
+                header("Location: /index.php");
+                exit;
+            } 
+
+            $_SESSION["key"] = $key;
+
+            //Free the memory
+            mysqli_free_result($result);
+
+        } 
+        else {
+            header("Location: /index.php");
+            exit;
+        }
+
+        mysqli_close($link);
+    }
+    else {
+        header("Location: /index.php");
+        exit;
+    }
+
+   
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        <?php 
-            /* 
-                Here we handle requests to the site. If it does not match the key 
-                the user will be sent to index.php (which will send the user to the login page) 
-            */
-        
-            //If there is no "correct" get request or not a get request at all, throw them to index.php.
-            if(!empty($_GET) && isset($_GET["key"])) {
-                //Require imports
-                require($_SERVER['DOCUMENT_ROOT']."/forbidden/init_session.php");
-                require($_SERVER['DOCUMENT_ROOT']."/forbidden/db_connection.php");
-
-                $key = mysqli_real_escape_string($link,$_GET["key"]);
-                $sql = "SELECT * FROM Link WHERE link.address_key ='$key' limit 1";
-            
-                if($result = mysqli_query($link, $sql)){
-                
-                    if(mysqli_num_rows($result) != 1){
-                        
-                        header("Location: /index.php");
-                        exit;
-                    } 
-                    
-                    $_SESSION["key"] = $key;
-
-                    //Free the memory
-                    mysqli_free_result($result);
-            
-                } 
-                else {
-                    header("Location: /index.php");
-                    exit;
-                }
-            }
-            else {
-                header("Location: /index.php");
-                exit;
-            }
-
-            mysqli_close($link);
-        ?>
 
         <!--- Ordinary Information -->
         <title>Student | Registrera</title>
@@ -71,7 +75,7 @@
                     <div class="d-flex background align-items-center">
                         <div class="card my-4 text-center mx-auto">
                             <div class="card-header pt-4">
-                                <h2 id="card-header-text">FELICIAS STUDENT</h2>
+                                <h2 id="card-header-text">Registrera ett konto</h2>
                             </div>
                             <div class="card-body">
                                 <form action="register_dbcon.php" method="POST">

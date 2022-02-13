@@ -1,12 +1,13 @@
+<?php 
+    //Require a session and ensure that the visitor is logged in.
+    require("forbidden/init_session.php"); 
+    require("forbidden/check_login.php");
+    redirectIfNotLoggedIn("wishlist.php");
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        <?php 
-             //Require a session and ensure that the visitor is logged in.
-            require("forbidden/init_session.php"); 
-            require("forbidden/check_login.php");
-            redirectIfNotLoggedIn("wishlist.php");
-        ?>
         <title>Student | Studentdagen</title>
         <link rel="icon" href="images/mössa.jpg">
         <meta charset="UTF-8">
@@ -64,9 +65,9 @@
                     <div class="row">
                         <div class="col-12 description">
                             <p>
-                                Om ni vill köpa något finns förslag nedan. Vänligen bocka för det du vill köpa och
-                                tryck sedan på <strong>"Skicka"</strong> knappen längst ner för att undvika dubbletter. Om ett objekt är <s>överstruket
-                                </s> så betyder det att någon annan redan har köpt det. 
+                                Vänligen bocka för det du vill köpa och
+                                tryck sedan på <strong>"Skicka"</strong> knappen längst ner för att undvika dubbletter. Om ett objekt är <s>överstruket</s>
+                                så innebär det att någon annan redan har låst den presenten. 
                             </p>
                         </div>
                     </div>
@@ -76,7 +77,7 @@
                     <!-- Gift form -->
                     <div class="card mx-auto mt-5">
                         <div class="card-header pt-4">
-                            <h2 id="card-header-text">Presentlista</h2>
+                            <h2 id="card-header-text">Önskelista</h2>
                         </div>
                         <div class="card-body">
                             <form action="wishlist_dbcon.php" id="gift-form" method="POST">  
@@ -94,7 +95,7 @@
                                                 $taken = $rows["taken"];
                                                 
                                                 if($taken) {
-                                                    print("<div class='form-group'>
+                                                    print("<div class='form-group mb-3'>
                                                                 <div class='col py-3 ml-3 float-left'>
                                                                     <input class='form-check-input' type='checkbox' value='$name' name='gift[]' id='$name' disabled>
                                                                     <label class='form-check-label' for='$name'>
@@ -104,7 +105,7 @@
                                                             </div>");
                                                 }
                                                 else {
-                                                    print("<div class='form-group'>
+                                                    print("<div class='form-group mb-3'>
                                                                 <div class='col py-3 ml-3 float-left'>
                                                                     <input class='form-check-input' type='checkbox' value='$name' name='gift[]' id='$name'>
                                                                     <label class='form-check-label' for='$name'>
@@ -123,8 +124,8 @@
                                     }
                                 
                                 ?>
-                                
-                                <button type="submit" name="submit" id="submit" class="btn btn-primary mx-auto py-3 mt-6">Skicka min anmälan</button>
+                             
+                                <button type="submit" name="submit" id="submit" class="btn btn-primary mx-auto py-3 mt-4">Skicka min anmälan</button>
                                 <p class="pt-4 text-center">Om du har strukit över ett objekt men ångrar dig, se <a href="account.php">Mitt Konto</a></p>
                             
                                 <!--- Handle any error -->

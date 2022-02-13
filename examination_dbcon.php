@@ -13,7 +13,7 @@
         $comment =  mysqli_real_escape_string($link,$_POST["general"]);
 
         //If the activity is "nothing" we want to ignore the allergies.
-        if($activity === "kommer ej") {
+        if($status === "kommer ej") {
             $allergies = "";
         }
 
@@ -39,12 +39,12 @@
             
             if(sendMail($email,$sub,$message_HTML, $message_HTML)) {
                 $_SESSION["code"] = $SUCCESS_MAIL;
-                header("Location: /examination.php#register-form");
+                header("Location: examination.php#register-form");
                 exit;
             }
             else {
                 $_SESSION["code"] = $ERROR_MAIL_NOT_SENT;
-                header("Location: /examination.php#register-form");
+                header("Location: examination.php#register-form");
                 exit;
             }
         }

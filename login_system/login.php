@@ -1,11 +1,12 @@
+<?php 
+    //Require a session
+    require($_SERVER['DOCUMENT_ROOT']."/forbidden/init_session.php");
+            
+?>
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        <?php 
-            //Require a session
-            require($_SERVER['DOCUMENT_ROOT']."/forbidden/init_session.php");
-            
-        ?>
+        
         <!--- Ordinary Information -->
         <title>Student | Logga in</title>
         <link rel="icon" href="../images/mössa.jpg">
@@ -34,7 +35,7 @@
                     <div class="d-flex background align-items-center">
                         <div class="card my-4 text-center mx-auto">
                             <div class="card-header pt-4">
-                                <h2 id="card-header-text">Felicias Student</h2>
+                                <h2 id="card-header-text">Logga in</h2>
                             </div>
                             <div class="card-body">
                                 <form action="login_dbcon.php" method="POST">

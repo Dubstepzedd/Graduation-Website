@@ -1,12 +1,13 @@
+<?php 
+    //Require a session and ensure that the visitor is logged in.
+    require("forbidden/init_session.php"); 
+    require("forbidden/check_login.php");
+    redirectIfNotLoggedIn("account.php");
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        <?php 
-            //Require a session and ensure that the visitor is logged in.
-            require("forbidden/init_session.php"); 
-            require("forbidden/check_login.php");
-            redirectIfNotLoggedIn("account.php");
-        ?>
         <title>Student | Mitt Konto</title>
         <link rel="icon" href="images/mössa.jpg">
         <meta charset="UTF-8">

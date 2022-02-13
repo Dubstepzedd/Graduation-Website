@@ -1,11 +1,10 @@
+<?php 
+    //Require a session
+    require($_SERVER['DOCUMENT_ROOT']."/forbidden/init_session.php");
+?>
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        <?php 
-            //Require a session
-            require($_SERVER['DOCUMENT_ROOT']."/forbidden/init_session.php");
-            
-        ?>
         <!--- Ordinary Information -->
         <title>Student | Glömt Lösenord</title>
         <link rel="icon" href="../images/mössa.jpg">

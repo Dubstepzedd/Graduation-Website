@@ -9,15 +9,13 @@ body,html {
 }
 
 .background {
-  /*  background-image: url("../images/kagg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;*/
     min-height: 100vh;
 }
+
 .card-header {
     text-decoration: underline;
-    text-underline-offset: 4px;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
     background: #FFFF;
     border: 0;
 }
