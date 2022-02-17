@@ -10,7 +10,7 @@
         <link rel="icon" href="../images/mössa.jpg">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="En sida dedikerad till Felicia Björneklints student 2022">
+        <meta name="description" content="En sida dedikerad till Felicia Björneklints student 2022.">
         <meta name="author" content="Liam Andersson">
 
         <!--- Font -->
@@ -44,7 +44,7 @@
                                             <input type="email" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}" class="form-control" name="email" id="email" required="required" placeholder="...">
                                         </div>
                                     </div>
-                                    <p> Vi kommer att skicka ett meddelande till den angivna E-Posten ovan om den existerar i databasen. </p>
+                                    <p> Vi kommer att skicka ett meddelande till den angivna E-Posten ovan om den existerar i databasen.</p>
                                     <button type="submit" name="submit" class="btn btn-primary px-2 py-2 mt-4">Skicka</button>
 
                                     <!--- Handle any error -->

@@ -110,7 +110,11 @@
 
                 <section>
                     <!-- Space -->
-                    <div id="space"></div>
+                    <div class="row" id="space">
+                        <div class="col-12">
+                            <img class="mx-auto img"src="images/mössa.png" alt="Studentmössa">
+                        </div>
+                    </div>
                 </section>
 
                 <section>
