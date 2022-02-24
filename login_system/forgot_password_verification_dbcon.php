@@ -29,7 +29,8 @@
                         //Query successful.
                         $_SESSION["code"] = $SUCCESS_VERIFICATION;
                         unset($_SESSION["verification"]);
-                        header("Location: login.php");
+                        //Log the user out just in case he/she was logged in. (See account.php)
+                        header("Location: logout.php");
                         exit;
                     }
                     else {
@@ -65,7 +66,7 @@
     
     //Wrong method call, someone is trying to breach the page from outside?
     $_SESSION["code"] = $ERROR_UNKNOWN;
-    header("Location: login_system/forgot_password.php");
+    header("Location: forgot_password.php");
     exit;
     
 ?>

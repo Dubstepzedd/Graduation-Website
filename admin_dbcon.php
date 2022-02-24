@@ -134,6 +134,46 @@
 
                 break;
 
+            case "EDIT-GIFTS":
+                if(isset($_POST["gift"]) && is_array($_POST["gift"]) ) {
+
+                    $selectedGifts = array_map(function( $element ) use ($link) {
+                        return mysqli_real_escape_string($link, $element);
+                    }, $_POST["gift"]);
+                    
+                    
+                    $delete_all = "DELETE FROM Gift";
+                    
+                    if(mysqli_query($link,$delete_all)) {
+
+                        foreach($selectedGifts as $giftName) {
+                            $updateGift = "INSERT INTO Gift(name) VALUES('$giftName')";
+                            if(!mysqli_query($link,$updateGift)) {
+                                //Query Failed
+                                $_SESSION["code"] = $ERROR_CHANGE;
+                                header("Location: account.php");
+                                exit;
+                            }
+                        
+                        }
+
+                        //Success
+                        $_SESSION["code"] = $SUCCESS_CHANGE;
+                        header("Location: account.php");
+                        exit;
+
+                      
+                    }
+                    else {
+                        //Query failed
+                        $_SESSION["code"] = $ERROR_CHANGE;
+                        header("Location: account.php");
+                        exit;
+                    }
+                }
+
+                break;
+
         }
 
     }
@@ -142,6 +182,8 @@
     $_SESSION["code"] = $ERROR_CHANGE;
     header("Location: account.php");
     exit;
+    
+
     
     //Generates a random and never before used code.
     function generateCode() {

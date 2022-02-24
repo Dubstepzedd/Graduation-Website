@@ -2,16 +2,17 @@
     <div class="container">
         <div class="row gy-4 gx-5">
             <div class="col-lg-4 col-md-6">
-                <h5 class="text-white footer-title">Kort information</h5>
-                <p class="small text-muted">Den här sidan är dedikerad till Felicia Björneklints student.
+                <h5 class="text-white mb-3 footer-title">Kort information</h5>
+                <p class="small text-muted">
+                    Den här sidan är dedikerad till Felicia Björneklints student.
                     All nödvändig information finns tillgänglig på den här domänen.
                 </p>
                 <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. Björneklint</p>
             </div>
             <div class="col-lg-2 col-md-6">
                 <h5 class="text-white mb-3 footer-title">Länkar</h5>
-                <ul class="list-unstyled text-muted">
-                    <li><a href="#" class="small">Hem</a></li>
+                <ul class="list-unstyled text-muted py-0">
+                    <li><a href="index.php" class="small">Hem</a></li>
                     <li><a href="examination.php"  class="small">Studentdagen</a></li>
                     <li><a href="contact.php" class="small">Önskelista</a></li>
                     <li><a href="contact.php" class="small">Kontakt</a></li>

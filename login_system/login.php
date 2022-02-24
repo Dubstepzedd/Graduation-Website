@@ -1,12 +1,16 @@
 <?php 
     //Require a session
     require($_SERVER['DOCUMENT_ROOT']."/forbidden/init_session.php");
+
+    //If the user went to change password but changer her/his mind, the verification code should be overriden.
+    if(isset($_SESSION["verification"])) {
+        unset($_SESSION["verification"]);
+    }
             
 ?>
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        
         <!--- Ordinary Information -->
         <title>Student | Logga in</title>
         <link rel="icon" href="../images/mössa.jpg">
@@ -55,7 +59,7 @@
                                         </div>
                                     </div>
                                     
-                                    <p>Notera: Du kommer endast att loggas ut när webbläsaren stängs ner.</p>
+                                    <p>Notera: Du kommer automatiskt att loggas ut när webbläsaren stängs ner.</p>
                                     <button type="submit" name="submit" class="btn btn-primary px-2 py-2 mt-4">Logga in</button>
                                     <a id="forgot-password" name="forgot-password" class="my-3" href="forgot_password.php">Jag har glömt mitt lösenord</a>
 

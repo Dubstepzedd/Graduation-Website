@@ -3,7 +3,7 @@
     require($_SERVER['DOCUMENT_ROOT']."/forbidden/init_session.php");
 
     //If a request to this page was not made by forgot_password.php, then send them back to that page.
-    if(!isset($_SESSION["verification"]) && !$_SESSION["verification"]) {
+    if(!isset($_SESSION["verification"])) {
         header("Location: forgot_password.php");
         exit;
     }
@@ -48,7 +48,7 @@
                                     <div class="row">
                                         <div class="col py-3">
                                             <label class="my-1 mr-2 float-left" for="verificationCode">Verifikationskod</label>
-                                            <input type="text" class="form-control"  style="text-transform:uppercase" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}" name="verificationCode" id="verificationCode" required="required" placeholder="...">
+                                            <input type="text" class="form-control" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}" name="verificationCode" id="verificationCode" required="required" placeholder="...">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -70,6 +70,7 @@
                                         Hittar du inte din kod? Dubbelkolla skräpposten!
                                     </p>
                                     <button type="submit" name="submit" class="btn btn-primary px-2 py-2 mt-4">Skicka</button>
+                                    <a class="mt-3" id="back" href="login.php">Jag vill logga in</a>
 
                                     <!--- Handle any error -->
                                     <?php 

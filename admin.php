@@ -260,3 +260,63 @@
         </div>
     </div>
 </section>
+
+<!-- Edit gifts -->
+
+
+<section>
+    <div class="card my-5 text-center mx-auto">
+        <div class="card-header text-center pt-4">
+            <h2 id="card-header-text">Ändra existerande presenter</h2>
+        </div>
+
+        <div class="card-body">
+            <form action="admin_dbcon.php" method="POST">
+                <div class="form-group">
+                    <!-- Hidden input, We have to keep track of what form is submitted on the page -->
+                    <input type="hidden" name="form-id" id="form-id" value="EDIT-GIFTS">
+                    <?php 
+                        //Display all the taken gifts and their "owners".
+                        $getTakenGifts = "SELECT name FROM Gift";
+
+                        if($result = mysqli_query($link,$getTakenGifts)) {
+                            //Query successful
+                            if(mysqli_num_rows($result) > 0) {
+                                
+                                //There are results
+                                while($row = mysqli_fetch_array($result)) {
+                                    //Fetch a row
+                                    $name = $row["name"];
+                                    
+                                    print('<input type="text" class="form-control mb-3" name="gift[]" id="' . $name . '" ' . 'value="'. $name .'" required="required" >');
+                                }
+                            }
+                            else {
+                                print("<p>Hittade inga presenter i listan.</p>");
+                            }
+                        }
+                        else {
+                            $_SESSION["code"] = $ERROR_UNKNOWN;
+
+                        }
+                    
+                    ?>
+                    <button type="submit" name="submit" id="submit" class="btn btn-primary px-2 mx-auto py-2 mt-4">Ändra presenter</button>
+                </div>
+            </form>
+        </div>
+
+        <!--- Handle any error -->
+        <?php 
+            
+            $code = getCode($CODES);
+        
+            switch($code) {
+                // Possible scenarios.
+                case $ERROR_UNKNOWN:
+                    echo "<p style='color: red' class='my-3 text-center'>Något gick fel. Vänligen försök igen eller kontakta <a href='mailto:liam.andersson2002@gmail.com'>liam.andersson2002@gmail.com.</a></p>";
+                    break;
+            }
+        ?>
+    </div>
+</section>

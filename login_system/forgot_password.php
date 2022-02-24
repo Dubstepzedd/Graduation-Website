@@ -46,7 +46,7 @@
                                     </div>
                                     <p> Vi kommer att skicka ett meddelande till den angivna E-Posten ovan om den existerar i databasen.</p>
                                     <button type="submit" name="submit" class="btn btn-primary px-2 py-2 mt-4">Skicka</button>
-
+                                    <a class="mt-3" id="back" href="login.php">Jag vill logga in</a>
                                     <!--- Handle any error -->
                                     <?php 
                                         include($_SERVER['DOCUMENT_ROOT']."/forbidden/check_error.php");
