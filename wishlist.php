@@ -36,11 +36,11 @@
                     <!-- The  three images at the top -->
                     <div class="row align-self-center wrapper">
                     
-                        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4" id="left-image"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4" id="left-image"></div>
                         
-                        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4" id="middle-image"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4" id="middle-image"></div>
                         
-                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" id="right-image"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4" id="right-image"></div>
 
 
                         <!-- Thank you ShadeDivider [https://www.shapedivider.app/] for providing this tool.  -->
@@ -65,9 +65,9 @@
                     <div class="row">
                         <div class="col-12 description">
                             <p>
-                                Vänligen bocka för det du vill köpa och
-                                tryck sedan på <strong>"Skicka"</strong> knappen längst ner för att undvika dubbletter. Om ett objekt är <s>överstruket</s>
-                                så innebär det att någon annan redan har låst den presenten. 
+                                Om det är något på listan som du vill köpa, vänligen bocka för det och
+                                tryck sedan på skicka längst ner för att undvika dubbletter. Om ett objekt är <s>överstruket</s>
+                                så innebär det att någon annan redan har bockat för den presenten. 
                             </p>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                                 
                                 ?>
                              
-                                <button type="submit" name="submit" id="submit" class="btn btn-primary mx-auto py-3 mt-4">Skicka min anmälan</button>
+                                <button type="submit" name="submit" id="submit" class="btn btn-primary mx-auto py-3 mt-4">Skicka</button>
                                 <p class="pt-4 text-center">Om du har strukit över ett objekt men ångrar dig, se <a href="account.php">Mitt Konto</a></p>
                             
                                 <!--- Handle any error -->

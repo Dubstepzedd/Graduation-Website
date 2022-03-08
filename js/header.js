@@ -4,7 +4,16 @@
 function changeIcon(el) {
 
     const icon = el.children[0];
-    const rotation = getCurrentRotation(icon) + 90;
+    var rotation = getCurrentRotation(icon);
+
+    rotation += 90;
+
+    //Make the button not clickable for a moment in order to avoid a bug.
+    el.style.pointerEvents = "none";
+    setTimeout( function(){
+        el.style.pointerEvents = "auto";
+    },350);
+
     icon.style.transform  = "rotate(" + rotation.toString() +"deg)";
  
 }

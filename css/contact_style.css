@@ -8,7 +8,7 @@ body,html {
     position: relative;
 }
 #left-image {
-    background-image: url("../images/felicia_toa.jpg");
+    background-image: url("../images/felicia_säng.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@ body,html {
 
 #middle-image {
     /* Gradient implemented in order to make the text more visible */
-    background-image: url("../images/felicia_påsk.jpg");
+    background-image: url("../images/felicia_handskar.jpg");
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -71,8 +71,9 @@ body,html {
     color: rgb(0, 140, 255) !important;
 }
 .img {
-    width: 75vw;
-    max-width: 500px;
+    display: block;
+    max-height: 500px;
+    max-width: 600px;
 }
 
 .info-container {

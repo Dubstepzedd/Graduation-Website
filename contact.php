@@ -69,7 +69,7 @@
                         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mx-auto">
                             <div class="card mb-5">
                                 <div class="card-body mx-auto">
-                                    <img class="img mx-auto" src="images/felicia_vuxen.JPG">
+                                    <img class="img mx-auto" src="images/felicia_göteborg.jpg">
                                     <div class="info-container">
                                         <h4 class="card-title">Felicia Björneklint</h5>
                                         <p class="card-text">Telefon: <a class="blue-text" href="tel:+46723298140">072-329 81 40</a></p>
@@ -82,10 +82,10 @@
                         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mx-auto">
                             <div class="card">
                                 <div class="card-body mx-auto">
-                                    <img class="img mx-auto" src="images/felicia_vuxen.JPG">
+                                    <img class="img mx-auto" src="images/malena.jpg">
                                     <div class="info-container">
                                         <h4 class="card-title">Malena Björneklint</h5>
-                                        <p class="card-text">Telefon: <a class="blue-text" href="tel:+46705081770">070 508 17 70</a></p>
+                                        <p class="card-text">Telefon: <a class="blue-text" href="tel:+46705081770">070-508 17 70</a></p>
                                         <p class="card-text">E-Post: <a class="blue-text" href="mailto:Malena.bk@live.se">Malena.bk@live.se</a></p>
                                     </div>
                                 </div>

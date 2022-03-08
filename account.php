@@ -37,11 +37,11 @@
                     <!-- Three images at the top -->
                     <div class="row align-self-center wrapper">
                         
-                        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4" id="left-image"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4" id="left-image"></div>
                         
-                        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4" id="middle-image"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4" id="middle-image"></div>
                         
-                        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4" id="right-image"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4" id="right-image"></div>
 
 
                         <!-- Thank you ShadeDivider [https://www.shapedivider.app/] for providing this tool. -->
@@ -60,9 +60,8 @@
                             Välkommen!
                         </h4>
                         <h5 class="page-info mt-2 pb-5">
-                            Här har du möjlighet att ändra all information som du angav vid
-                            registrering. Utöver det här så har du även möjlighet att ta bort eventuella markerade
-                            presenter.
+                            Här har du möjlighet att ändra information gällande ditt konto samt 
+                            ta bort eventuella markerade presenter.
                         </h5>
                         <a href="login_system/logout.php" id="logout">Jag vill logga ut. </a>
                     </div>

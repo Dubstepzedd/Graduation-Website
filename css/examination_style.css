@@ -157,7 +157,9 @@ h1.student-text:hover {
     display: block;
     width: 50%;
 }
-
+h1 > a {
+    color: rgb(0, 153, 255);
+}
 .fixed-img-container {
     position: relative;
 }

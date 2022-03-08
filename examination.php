@@ -21,9 +21,8 @@
         <!--- Handle Radiobuttons in form (disables allergies when a certain status is checked) --->
         <script type="text/javascript">
             $(document).ready(function(){
-                $('input[type=radio][name=activity]').change(function() {
+                $('input[type=radio][name=status]').change(function() {
                     if (this.id == "none" && this.checked) {
-                        console.log(this.value);
                         $(".alternative").prop("disabled",true);
                     }
                     else {
@@ -52,11 +51,11 @@
                     <!-- The  three images at the top -->
                     <div class="row align-self-center wrapper">
                     
-                        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4" id="left-image"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4" id="left-image"></div>
                         
-                        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4" id="middle-image"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4" id="middle-image"></div>
                         
-                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" id="right-image"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4" id="right-image"></div>
 
                         <!-- Thank you ShadeDivider [https://www.shapedivider.app/] for providing this tool.  -->
                         <div class="custom-shape-divider-bottom-1644017640">
@@ -94,7 +93,7 @@
                         <div class="background" id="school-background">
                             <div class="row h-100">
                                 <div class="col-sm-12 my-auto">
-                                    <h1 class="info-text mx-auto my-auto">Utspring kommer att ske på <a href="https://goo.gl/maps/tAH6iSBKdB9bgtgs7" target="_blank">Lars Kaggskolan</a> (Lorensbergsgatan 56). Exakt tid för utspring kommer i Maj. </h1>
+                                    <h1 class="info-text mx-auto my-auto">Utspring kommer att ske på Lars Kaggskolan (<a href="https://goo.gl/maps/tAH6iSBKdB9bgtgs7" target="_blank">Lorensbergsgatan 56</a>). Exakt tid för utspring kommer i maj. </h1>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +131,7 @@
                         <div class="background" id="party-background">
                             <div class="row h-100">
                                 <div class="col-sm-12 my-auto">
-                                    <h1 class="info-text mx-auto my-auto">Efter utspringet kommer jag att åka flak i Kalmar city i cirka en timme. Därefter serveras mat och dryck i trädgården på <a>Mandelblomsvägen 31</a></h1>
+                                    <h1 class="info-text mx-auto my-auto">Efter utspringet kommer jag att åka flak i Kalmar city i cirka en timme. Därefter serveras mat och dryck i trädgården på <a href="https://goo.gl/maps/o9mMQ1kwv6EaCPQV6" target="_blank">Mandelblomsvägen 31</a></h1>
                                 </div>
                             </div>
                         </div>
@@ -148,14 +147,14 @@
 
                 <section>
                     <!-- Registration form -->
-                    <div class="card mx-auto">
+                    <div class="card mx-auto" id="examForm">
                         <div class="card-header pt-4">
                             <h2 id="card-header-text">Anmälningsformulär</h2>
                         </div>
                         <div class="card-body">
-                            <form action="examination_dbcon.php" id="register-form" method="POST">
+                            <form action="examination_dbcon.php" method="POST">
                                 <!--- Basic information -->
-                                <div class="form-group">
+                                <div class="form-group" accept-charset="utf-8">
                                     <div class="col py-3">
                                         <label class="my-1 mr-2 float-left" for="firstName">Förnamn</label>
                                         <input type="text" class="form-control" name="firstName" id="firstName" required="required" value="<?php print($_SESSION["firstName"]);?>" readonly>

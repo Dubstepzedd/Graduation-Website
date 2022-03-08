@@ -46,11 +46,11 @@
                     <h2 id="countdown-text">DAGAR KVAR TILL STUDENTEN</h2>
                   </div>
                   
-                  <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4" id="left-image"></div>
+                  <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4" id="left-image"></div>
                   
-                  <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4" id="middle-image"></div>
+                  <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4" id="middle-image"></div>
                   
-                  <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4" id="right-image"></div>
+                  <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4" id="right-image"></div>
 
 
                   <!-- Thank you ShadeDivider [https://www.shapedivider.app/] for providing this tool. -->
@@ -74,7 +74,7 @@
                       <h2 id="date">Fredagen den 17 Juni</h3>
                       <h3 id="utspring">Utspring: Lars Kaggskolan</h4>
                       <h3 id="fika">Firande & Mat: Mandelblomsvägen 31</h4>
-                      <p id="ytterligare_info">OSA senast 1:a Juni på <a href="examination.php#register-form">Studentdagen.</a></p>
+                      <p id="ytterligare_info">OSA senast 1:a Juni på <a href="examination.php#examForm">Studentdagen.</a></p>
                     </div>
                   </div>
                 </div>
