@@ -131,7 +131,7 @@
                         <div class="background" id="party-background">
                             <div class="row h-100">
                                 <div class="col-sm-12 my-auto">
-                                    <h1 class="info-text mx-auto my-auto">Efter utspringet kommer jag att åka flak i Kalmar city i cirka en timme. Därefter serveras mat och dryck i trädgården på <a href="https://goo.gl/maps/o9mMQ1kwv6EaCPQV6" target="_blank">Mandelblomsvägen 31</a></h1>
+                                    <h1 class="info-text mx-auto my-auto">Efter utspringet kommer jag att åka flak i Kalmar city i cirka en timme. Därefter serveras mat och dryck i trädgården på <a href="" target="_blank">Kristianvägen 3</a></h1>
                                 </div>
                             </div>
                         </div>
@@ -240,7 +240,7 @@
                                 </div>
                                                 
                                 <button type="submit" name="submit" id="submit"class="btn btn-primary mx-auto py-3 mt-5">Skicka min anmälan</button>
-                                <p class="pt-4 text-center">Vill du säga några ord på denna festliga dag, kontakta <a href="mailto:malena.bk@live.se">Malena Björneklint.</a></p>
+                                <p class="pt-4 text-center">Vill du säga några ord på denna festliga dag, kontakta <a href="mailto:X@Y.se">X.</a></p>
 
                                 <!--- Handle any error -->
                                 <?php 

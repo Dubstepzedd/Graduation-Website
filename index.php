@@ -13,7 +13,7 @@
         <link rel="icon" href="images/mössa.jpg">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="En sida dedikerad till Felicia Björneklints student 2022">
+        <meta name="description" content="En sida dedikerad till X student 2022">
         <meta name="author" content="Liam Andersson">
         
         <?php require("forbidden/required_imports.php"); ?>
@@ -71,9 +71,9 @@
                     <h1 class="student-text">STUDENT!</h1>
 
                     <div class="text-information">
-                      <h2 id="date">Fredagen den 17 Juni</h3>
+                      <h2 id="date">Fredagen den 17 Juni 2022</h3>
                       <h3 id="utspring">Utspring: Lars Kaggskolan</h4>
-                      <h3 id="fika">Firande & Mat: Mandelblomsvägen 31</h4>
+                      <h3 id="fika">Firande & Mat: Kristianvägen 3</h4>
                       <p id="ytterligare_info">OSA senast 1:a Juni på <a href="examination.php#examForm">Studentdagen.</a></p>
                     </div>
                   </div>
@@ -86,9 +86,6 @@
         <!-- FOOTER -->
         <?php require("forbidden/footer.php"); ?>
 
-        
-       
-        
     </body>
     
 

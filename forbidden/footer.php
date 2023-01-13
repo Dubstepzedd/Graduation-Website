@@ -4,10 +4,10 @@
             <div class="col-lg-4 col-md-6">
                 <h5 class="text-white mb-3 footer-title">Kort information</h5>
                 <p class="small text-muted">
-                    Den här sidan är dedikerad till Felicia Björneklints student.
+                    Den här sidan är dedikerad till X student.
                     All nödvändig information finns tillgänglig på den här domänen.
                 </p>
-                <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. Björneklint</p>
+                <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. X</p>
             </div>
             <div class="col-lg-2 col-md-6">
                 <h5 class="text-white mb-3 footer-title">Länkar</h5>

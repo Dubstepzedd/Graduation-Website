@@ -141,35 +141,55 @@
                         return mysqli_real_escape_string($link, $element);
                     }, $_POST["gift"]);
                     
+        
+                    $getCurrentGifts = "SELECT Gift.name FROM Gift";
                     
-                    $delete_all = "DELETE FROM Gift";
-                    
-                    if(mysqli_query($link,$delete_all)) {
+                    $currentGifts = [];
+                    $i = 0;
 
-                        foreach($selectedGifts as $giftName) {
-                            $updateGift = "INSERT INTO Gift(name) VALUES('$giftName')";
-                            if(!mysqli_query($link,$updateGift)) {
-                                //Query Failed
-                                $_SESSION["code"] = $ERROR_CHANGE;
-                                header("Location: account.php");
-                                exit;
-                            }
+                    if($result = mysqli_query($link, $getCurrentGifts)) {
                         
+                        if(mysqli_num_rows($result) > 0) {
+
+                            while($row = mysqli_fetch_Array($result)) {
+                                $name = $row["name"];
+                                $currentGifts[$i] = $name;
+                                $i++;
+                            }
+                            //Set the new data
+                            for($x = 0; $x < count($selectedGifts); $x++) {
+                                $giftName = $selectedGifts[$x];
+                                $currentGiftName = $currentGifts[$x];
+
+                                $updateGift = "UPDATE Gift SET name = '$giftName' WHERE name = '$currentGiftName'";
+
+                                if(!mysqli_query($link,$updateGift)) {
+                                    print(mysqli_error($link));
+                                    //Query Failed
+                                    $_SESSION["code"] = $ERROR_CHANGE;
+                                    header("Location: account.php");
+                                    exit;
+                                }
+                                
+                  
+                            }
+
+                            //Success
+                            $_SESSION["code"] = $SUCCESS_CHANGE;
+                            header("Location: account.php");
+                            exit;
+                        }
+                        else {
+                            //No results
+                            $_SESSION["code"] = $ERROR_CHANGE;
+                            header("Location: account.php");
+                            exit;
                         }
 
-                        //Success
-                        $_SESSION["code"] = $SUCCESS_CHANGE;
-                        header("Location: account.php");
-                        exit;
+                    }
 
-                      
-                    }
-                    else {
-                        //Query failed
-                        $_SESSION["code"] = $ERROR_CHANGE;
-                        header("Location: account.php");
-                        exit;
-                    }
+                   
+                    
                 }
 
                 break;
