@@ -31,3 +31,4 @@ There are a lot of improvements that can be made.
 2. Security is something that I tried keeping in mind while developing the website, however there might still be some 
 security flaws in the project. 
 3. The project is not as modular as I would like it to be. There are a lot of files and it gets confusing fast.
+4. Keep passwords, keys and other sensitive information in a separate git ignored file. I had to remove all this information before pushing it onto github.
