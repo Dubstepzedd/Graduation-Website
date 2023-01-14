@@ -1,0 +1,279 @@
+body, html {
+    font-family: 'Montserrat', sans-serif !important;
+    overflow-x: hidden;
+}
+
+/* Images */
+.wrapper {
+    position: relative;
+}
+#left-image {
+    background-image: url("../images/felicia_toa.jpg");
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#middle-image {
+    /* Gradient implemented in order to make the text more visible */
+    background-image: url("../images/felicia_påsk.jpg");
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#right-image {
+    background-image: url("../images/felicia_mat.JPG");
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Wave styling */
+.custom-shape-divider-bottom-1644017640 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1644017640 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 30px;
+}
+
+.custom-shape-divider-bottom-1644017640 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+/* Text under images */
+
+.big-text-wrapper {
+    margin-top: 10vh;
+    position: relative;
+    text-align: center;
+    user-select: none;
+}
+
+/* This is a class at the moment, but can be an id if is not to be used more than once */
+.student-text {
+    font-size: 4em;
+    display:inline-block;
+    margin:15px;
+    font-weight:bold;
+    background: rgb(0,75,135);
+    background: linear-gradient(0deg, rgba(0,75,135,1) 50%, rgba(255,205,0,1) 50%);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1.student-text:hover {
+    animation: shake 0.5s;
+
+}
+/* Shake animation when you hover "STUDENT!" */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+/* Parallax backgrounds & information  */
+
+.background {
+    user-select: none;
+    width: 100%;
+    height: 70vh;
+
+}
+
+#school-background {
+    background: url("../images/kagg.PNG") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#party-background {
+    background: url("../images/kalmar.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+@media (max-device-width: 1366px) {
+    #school-background {
+        background-attachment: scroll;
+    }
+    #party-background {
+        background-attachment: scroll;
+    }
+}
+
+
+.info-text {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.5rem;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.75); /* Black background with 0.5 opacity */
+    max-width: 700px;
+    width: 70%;
+    color: white;
+    padding: 0.5rem;
+}
+
+@media (max-device-width: 400px) {
+    .info-text {
+        font-size: 1.2rem;
+    }
+}
+
+#space {
+    padding-top:15vh;
+    padding-bottom:15vh;
+}
+
+.img {
+    width: 75vw;
+    max-width: 500px;
+    display: block;
+    width: 50%;
+}
+h1 > a {
+    color: rgb(0, 153, 255);
+}
+.fixed-img-container {
+    position: relative;
+}
+
+/* Waves below */
+
+.custom-shape-divider-top-1644359076 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1644359076 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1644359076 .shape-fill {
+    fill: #FFFFFF;
+}
+/* Waves above */
+
+.custom-shape-divider-bottom-1644359138 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1644359138 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1644359138 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+/* Registration Form */
+.form-control, .form-control:focus,.form-control.hover {
+    background: #FFFF;
+}
+.card-header {
+    background: #FFFF;
+    border: 0;
+}
+
+@media (max-width: 420px) {
+    .card-header {
+        font-size: 0.75rem;
+    }
+}
+
+.card {
+    margin-top: 10em;
+    width: 90vw;
+    max-width: 1400px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+#card-header-text {
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+    color: #022;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+    
+}
+
+p > a {
+    color: rgb(1, 15, 212);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+}
+.form-check-label {
+   margin-top: -6px;
+}
+
+#submit {
+    display: block;
+    max-width: 800px;
+    width: 75%;
+    border-radius: 20px;
+}
+
+.form-check {
+    user-select: none;
+}
+
+textarea {
+    white-space: pre-wrap;
+    resize: none;
+    width: 100%;
+}
+
+.alernative {
+    word-wrap: break-word;
+    max-width: 800px;
+
+}

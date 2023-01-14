@@ -1,0 +1,122 @@
+body,html {
+    font-family: 'Montserrat', sans-serif !important;
+    overflow-x: hidden;
+}
+
+/* Images */
+.wrapper {
+    position: relative;
+}
+#left-image {
+    background-image: url("../images/felicia_wilhelm.jpg");
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#middle-image {
+    /* Gradient implemented in order to make the text more visible */
+    background-image: url("../images/felicia_pannkaka.jpg");
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#right-image {
+    background-image: url("../images/felicia_gas.jpg");
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Wave styling */
+.custom-shape-divider-bottom-1644017640 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1644017640 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 30px;
+}
+
+.custom-shape-divider-bottom-1644017640 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+#page-header {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+}
+
+.page-info {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+/* Cards */
+.form-control, .form-control:focus,.form-control.hover {
+    background: #FFFF;
+}
+
+.card-header {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+    background: #FFFF;
+    border: 0;
+}
+.card {
+    width: 90vw;
+    max-width: 800px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#card-header-text {
+    font-size: 2em;
+    margin: 0;
+    color: #022;
+}
+
+#forgot-password {
+    color: rgb(1, 15, 212);
+    display: block;
+    text-decoration: none;
+    
+}
+
+#btn {
+    width: 50%;
+    border-radius: var(--rounded);
+}
+
+#submit {
+    display: block;
+    max-width: 800px;
+    width: 65%;
+    border-radius: 20px;
+}
+
+#logout {
+    font-size: 1.2em;
+    color: red;
+}
+
+#logout:hover {
+    font-size: 1.25em;
+    color: green;
+}
+

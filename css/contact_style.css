@@ -1,0 +1,93 @@
+body,html {
+    font-family: 'Montserrat', sans-serif !important;
+    overflow-x: hidden;
+}
+
+/* Images */
+.wrapper {
+    position: relative;
+}
+#left-image {
+    background-image: url("../images/felicia_säng.jpg");
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#middle-image {
+    /* Gradient implemented in order to make the text more visible */
+    background-image: url("../images/felicia_handskar.jpg");
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#right-image {
+    background-image: url("../images/felicia_midsommar.jpg");
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Wave styling */
+.custom-shape-divider-bottom-1644017640 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1644017640 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 30px;
+}
+
+.custom-shape-divider-bottom-1644017640 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+/* Cards */
+.card {
+    border: none;
+}
+
+.card-body {
+    padding: 0 !important;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.blue-text {
+    color: rgb(0, 140, 255) !important;
+}
+.img {
+    display: block;
+    max-height: 500px;
+    max-width: 600px;
+}
+
+.info-container {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.card-title, .title {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+}
+
+
+
+
+
