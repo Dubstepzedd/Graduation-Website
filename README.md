@@ -10,6 +10,7 @@ HTML and CSS - of course - was used for the frontend. The requirement, design, d
 project took combined about 3 months. 
 
 ## <ins>How can I test the page?</ins>
+[NOTE: Has only been tested on Windows 10/11]
 In order to test the page for free, the best way is to download software such as <b>MAMP</b> from their
 official [website](https://www.mamp.info/en/windows/). When installed, follow these simple steps:
 
@@ -25,8 +26,8 @@ When the server is on, click on <b>"Open WebStart page"</b>. On the page you'll 
 3. A table called  <b>"link"</b>. It has the columns "id", "address_key" with that are of type int and varchar(20).
 
 ## <ins>Improvements to be made</ins>
-There are a lot of improvements that can be made. First of all, PHP is old and insecure. A change of programming language 
-for the backend would be a good start. Another improvement would be to develop the page using 
-iterative development as it would make it easier for others to see what they like and do not like about each separate page. 
-My girlfriend had no clue how she wanted each page to look like, so it would make quite a lot of sense to use iterative development. 
-Something to keep an eye on next time.
+There are a lot of improvements that can be made. 
+1. First of all, PHP is old and insecure. A change of programming language for the backend would be a good start. 
+2. Security is something that I tried keeping in mind while developing the website, however there might still be some 
+security flaws in the project. 
+3. The project is not as modular as I would like it to be. There are a lot of files and it gets confusing fast.
