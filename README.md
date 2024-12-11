@@ -1,7 +1,7 @@
-# <ins>Examination Website</ins>
+# <ins>Graduation Website</ins>
 
 ## <ins>Description</ins>
-This is a project that I developed for my girlfriends highschool examination. It is used as a 
+This is a project that I developed for a highschool graduation. It is used as a 
 common platform for all who are invited. It contains necessary information and a wishlist. 
 All photos and information have been replaced with placeholders due to privacy. 
 
